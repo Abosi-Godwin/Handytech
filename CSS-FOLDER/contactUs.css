@@ -1,0 +1,526 @@
+*{
+    margin: 0;
+    padding: 0;
+    
+}
+
+/* body{
+  overflow: hidden;
+} */
+
+#navContainer{
+    background-color: rgb(0, 17, 92);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    z-index: 100;
+    border-bottom: 2px solid white;
+}
+
+#brandLogo{
+    flex: 1;
+    padding: 10px 5px;
+    width: 170px;
+
+}
+#brandLogo p{
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+#close{
+    width: 20px;
+    padding-bottom:16px;
+}
+
+#hamburger{
+    width: 30px;
+    display: flex;
+    align-items: center;
+    padding: 18px 10px;
+}
+
+#hamburger:hover {
+    cursor: grab;
+}
+
+#navigationContainer{
+    background-color: rgb(0, 9, 47);
+    width: 250px;
+    overflow: hidden;
+    position: fixed;
+    height: 100vh;
+    top: 0;
+    right: 0;
+    display: none;
+    z-index: 100;
+
+}
+
+#navigationContainer ul{
+    padding: 20px;
+}
+
+#navLinks{
+    padding-top: 20px;
+}
+
+#navigationContainer a{
+    text-decoration: none;
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+#navigationContainer a:hover{
+    cursor: grab;
+    border-bottom: 1px solid ;
+    /* color: rgb(6, 255, 252); */
+    color: rgb(255, 201, 6);
+    transition: 0.8s;
+}
+
+/* NAVIGATION ENDS HERE */
+
+
+
+
+
+/* THIS CODE HERE IS FOR THE SLIDER */
+
+  #slider-container {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    max-width: 600px;
+    margin: auto;
+    background-color: black;
+  }
+
+  .slider {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+  }
+
+  .slide {
+    min-width: 100%;
+    box-sizing: border-box;
+    position: relative;
+  }
+
+  #sliderImg {
+    width: 130%;
+    height: auto;
+    opacity: 0.35;
+    
+  }
+
+  .slide-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #ffffff;
+    font-size: 29px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    line-height: 35px;
+  }
+
+  #slide-button{
+    padding: 8px 12px;
+    border-radius: 100px;
+    margin-top: 20px;
+    border: none;
+    background-color: rgb(255, 201, 6);
+    color: black;
+    font-weight: bold;
+    font-size: 17px;
+  }
+
+  #prev, #next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 24px;
+    cursor: pointer;
+    color: #333;
+    background-color:rgb(255, 201, 6);
+    border: none;
+    padding: 10px;
+    outline: none;
+  }
+
+  #prev { left: 10px; }
+  #next { right: 10px; }
+  /* END OF SLIDER CODE */
+
+
+
+
+
+
+
+
+
+
+    /* THIS CODE HERE IS FOR REVIEWS */
+
+    #reviewsContainer{
+        width: 100%;
+        overflow: hidden;
+        /* background-color: rgb(6, 246, 255); */
+        background-color: rgb(224, 224, 224);
+        display: flex;
+        flex-direction: column;
+      }
+    
+      #review{
+        display: flex;
+        padding: 7px 10px;
+        align-items: start;
+      }
+    
+      #reviewNumber{
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-weight: bold;
+        color: rgb(0, 17, 92);
+        font-size: 25px;
+      }
+    
+      #reviewText{
+        font-size: 19px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        padding-left: 17px;
+        font-weight: bold;
+        color: rgb(43, 43, 43); 
+      }
+    
+      /* END OF REVIEWS CODE */
+    
+
+
+
+
+
+
+
+
+  /* THIS CODE HERE IS FOR CONTACT US */
+
+
+.homeContactContainer{
+  width: 95%;
+  overflow: hidden;
+  margin: 50px auto 0px auto;
+  /* border: 1px solid red; */
+  display: flex;
+  flex-direction: column;
+  background-color: #f7f7f7;
+  border-radius: 5px;
+}
+
+#contactInfoText{
+  width: 93%;
+  overflow: hidden;
+  margin: auto;
+  text-align: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#contactInfoText h3{
+  color: rgb(123, 0, 255);
+  font-size: 19px;
+}
+
+#contactInfoText h1{
+  font-size: 27px;
+  margin-top: 10px;
+}
+
+#contactInfoText p{
+  margin-top: 10px;
+}
+
+#contacthr{
+  background-color: rgb(0, 24, 130);
+  width: 250px;
+  margin: 40px auto;
+
+}
+
+
+.contactContainer{
+  width: 100%;
+  /* border: 1px solid blue; */
+  margin: 20px auto;
+  background-color: rgb(255, 201, 6);
+  border-radius: 17px;
+}
+
+.contactInfo{
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 40px;
+}
+
+.contactBox{
+  display: flex;
+  width: 80%;
+  margin: 40px auto 0px auto;
+  background-color: white; 
+  border-radius: 10px;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 15px;
+}
+
+.contactIcon{
+  width: 70px;
+  height: 70px;
+  background-color: rgb(255, 201, 6);
+  border-radius: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.contactIconImg{
+  width: 26px;
+  margin: auto;
+} 
+
+.contactIconEmailImg{
+  width: 40px;
+}
+
+.contactIconCallImg{
+  width: 30px;
+}
+
+.addressInfo{
+  
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.addressInfo p{
+  /* border: 1px solid blue; */
+  padding-top: 10px;
+  width: 190px;
+  text-wrap: wrap;
+  font-weight: bold;
+}
+
+
+.mapContainer{
+  width: 100%;
+  overflow: hidden;
+  margin: auto;
+  border: 1px solid yellow;
+  display: flex;
+  background-color: rgb(0, 24, 130) ;
+  border-radius: 16px;
+}
+
+#mapImage{
+  width: 80%;
+  margin: auto;
+  padding: 40px 30px;
+}
+
+
+.contactformContainer{
+  width: 95%;
+  overflow: hidden;
+  margin: 20px auto;
+  /* border: 1px solid red; */
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(255, 201, 6);
+  border-radius: 5px;
+  text-align: center;
+}
+
+.formInfoBox{
+  /* margin: 20px auto; */
+  margin: 20px 0px;
+}
+
+.contactInput{
+  font-size: 18px;
+  padding: 22px 20px;
+  border-radius: 14px;
+  border: none;
+  width: 70% ;
+}
+
+.contactButton{
+  /* width: 80%; */
+  margin: 0px auto 20px auto;
+  font-size: 20px;
+  font-weight: bold;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  padding: 15px 25px;
+  border: none;
+  border-radius: 10px ;
+  background-color: rgb(0, 24, 130);
+  color: rgb(255, 255, 255);
+}
+
+.contactButton:hover{
+  transform: scale(1.07);
+  transition: 0.5s;
+}
+
+/* CONTACT US CODE ENDS HERE */
+
+
+
+
+
+
+
+  /* THIS CODE HERE IS FOR FOOTER */
+
+footer{
+  width: 100%;
+  overflow: hidden;
+  background-color: rgb(0, 17, 92);
+  margin-top: 150px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.footerSections{
+  display: flex;
+  flex-direction: column;
+  width: 95%;
+  margin: 20px auto 20px auto;
+  
+}
+
+.footerBox{
+  padding: 10px ;
+}
+
+.footerHead{
+  color: rgb(255, 201, 6);
+  font-size: 25px;
+}
+
+.footerBox p{
+  color: white;
+  margin-top: 15px;
+}
+
+#socials{
+  display: flex;
+  margin-top: 25px;
+}
+
+.footerSocialsContainer{
+  width: 45px;
+  height: 45px;
+  background-color: white;
+  overflow: hidden;
+  border-radius: 100%;
+  margin-right: 8px;
+  display: flex;
+}
+
+.footerSocialsContainer:hover{
+  background-color: rgb(255, 201, 6);
+  transform: scale(1.1);
+  transition: 0.5s;
+}
+
+.footerSocials{
+  width: 18px;
+  margin: auto;
+}
+
+.footerfacebook{
+  width: 12px;
+  margin: auto;
+}
+
+
+.footerBox2{
+  margin-top: 30px;
+}
+
+.footerBox2 ul{
+  margin-left: 20px;
+  margin-top: 15px;
+  list-style-type: square white;
+}
+
+.footerBox2 ul a{
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.footerBox2 ul li{
+  padding-top: 8px;
+  letter-spacing: 1px;
+}
+
+.footerBox2 ul li::marker{
+  color: white;
+}
+
+.footerBox2 ul a:hover{
+  color: aqua;
+  cursor: grab;
+  transition: 0.5s;
+}
+
+
+.footerContactInfo hr{
+
+  margin-top: 20px;
+}
+
+.footerContactInfo li{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.footerContactInfo p{
+  margin-left: 10px
+}
+
+.footerImage{
+  width: 20px;
+}
+
+.footerBox3{
+  margin-top: 30px;
+}
+
+
+#rights{
+  margin: auto;
+  text-align: center;
+  color: white;
+  font-weight: bold;
+  padding-bottom: 20px;
+  padding-top: 20px;
+  line-height: 25px;
+}
+
+#rightsSpan{
+  color: rgb(255, 201, 6);
+}

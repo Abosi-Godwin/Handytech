@@ -1,0 +1,648 @@
+*{
+    margin: 0;
+    padding: 0;
+    
+}
+
+/* body{
+  overflow: hidden;
+} */
+
+#navContainer{
+  background-color: rgb(0, 17, 92);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  z-index: 100;
+  border-bottom: 2px solid white;
+}
+
+#brandLogo{
+  flex: 1;
+  padding: 10px 5px;
+  width: 170px;
+
+}
+#brandLogo p{
+  color: white;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+#close{
+  width: 20px;
+  padding-bottom:16px;
+}
+
+#hamburger{
+  width: 30px;
+  display: flex;
+  align-items: center;
+  padding: 18px 10px;
+}
+
+#hamburger:hover {
+  cursor: grab;
+}
+
+#navigationContainer{
+  background-color: rgb(0, 9, 47);
+  width: 250px;
+  overflow: hidden;
+  position: fixed;
+  height: 100vh;
+  top: 0;
+  right: 0;
+  display: none;
+  z-index: 100;
+
+}
+
+#navigationContainer ul{
+  padding: 20px;
+}
+
+#navLinks{
+  padding-top: 20px;
+}
+
+#navigationContainer a{
+  text-decoration: none;
+  color: white;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+#navigationContainer a:hover{
+  cursor: grab;
+  border-bottom: 1px solid ;
+  /* color: rgb(6, 255, 252); */
+  color: rgb(255, 201, 6);
+  transition: 0.8s;
+}
+
+/* NAVIGATION ENDS HERE */
+
+
+
+
+
+/* THIS CODE HERE IS FOR THE SLIDER */
+
+#slider-container {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  max-width: 600px;
+  margin: auto;
+  background-color: black;
+}
+
+.slider {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+  min-width: 100%;
+  box-sizing: border-box;
+  position: relative;
+}
+
+#sliderImg {
+  width: 130%;
+  height: auto;
+  opacity: 0.35;
+  
+}
+
+.slide-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #ffffff;
+  font-size: 29px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: bold;
+  line-height: 35px;
+}
+
+#slide-button{
+  padding: 8px 12px;
+  border-radius: 100px;
+  margin-top: 20px;
+  border: none;
+  background-color: rgb(255, 201, 6);
+  color: black;
+  font-weight: bold;
+  font-size: 17px;
+}
+
+#prev, #next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 24px;
+  cursor: pointer;
+  color: #333;
+  background-color:rgb(255, 201, 6);
+  border: none;
+  padding: 10px;
+  outline: none;
+}
+
+#prev { left: 10px; }
+#next { right: 10px; }
+  /* END OF SLIDER CODE */
+
+
+
+
+
+
+  /* THIS CODE HERE IS FOR REVIEWS */
+
+  #reviewsContainer{
+    width: 100%;
+    overflow: hidden;
+    /* background-color: rgb(6, 246, 255); */
+    background-color: rgb(224, 224, 224);
+    display: flex;
+    flex-direction: column;
+  }
+
+  #review{
+    display: flex;
+    padding: 7px 10px;
+    align-items: start;
+  }
+
+  #reviewNumber{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    color: rgb(0, 17, 92);
+    font-size: 25px;
+  }
+
+  #reviewText{
+    font-size: 19px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding-left: 17px;
+    font-weight: bold;
+    color: rgb(43, 43, 43); 
+  }
+
+  /* END OF REVIEWS CODE */
+
+
+
+
+  
+
+
+  /* THIS CODE HERE IS FOR ABOUT US */
+
+  #aboutUs{
+    width: 90%;
+    margin: 40px auto;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+
+  #aboutImageContainer{
+    flex: 1;
+    width: 100%;
+  }
+
+  #aboutImage{
+    width: 100%;
+  }
+
+  #aboutInfoContainer{
+    flex: 1;
+    margin-top: 15px;
+  }
+
+  #aboutMini{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: rgb(123, 0, 255);
+    font-size: 19px;
+    
+  }
+
+  #aboutTitle{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: rgb(0, 17, 92);
+    font-size: 25px;
+    margin-top: 8px;
+  }
+
+
+  #aboutTitle2{
+    margin-top: 15px;
+  }
+
+  #aboutInfoContainer p{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin-top: 16px;
+  }
+
+  #aboutButton{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 20px;
+    background-color: rgb(0, 17, 92);
+    color: rgb(6, 246, 255);
+    border: none;
+    border-radius: 100px;
+    padding: 15px 15px;
+    font-weight: bold;
+    margin-top: 10px;
+  }
+
+
+
+
+  .aboutCompanyContainer{
+    margin-top: 50px;
+  }
+
+
+  #abouCompanyImg{
+    width: 100%;
+  }
+
+  #aboutCompanyHead{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: rgb(0, 17, 92);
+    font-size: 25px;
+    margin-top: 30px;
+  }
+
+  #aboutCompanyHighlight{
+    background-color: rgb(255, 201, 6);
+    /* text-align: ; */
+  }
+
+  /* ABOUT US ENDS HERE */
+
+
+
+
+
+
+  /* THIS CODE HERE IS FOR FOOTER */
+
+  footer{
+    width: 100%;
+    overflow: hidden;
+    background-color: rgb(0, 17, 92);
+    margin-top: 150px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
+  
+  .footerSections{
+    display: flex;
+    flex-direction: column;
+    width: 95%;
+    margin: 20px auto 20px auto;
+    
+  }
+  
+  .footerBox{
+    padding: 10px ;
+  }
+  
+  .footerHead{
+    color: rgb(255, 201, 6);
+    font-size: 25px;
+  }
+  
+  .footerBox p{
+    color: white;
+    margin-top: 15px;
+  }
+  
+  #socials{
+    display: flex;
+    margin-top: 25px;
+  }
+  
+  .footerSocialsContainer{
+    width: 45px;
+    height: 45px;
+    background-color: white;
+    overflow: hidden;
+    border-radius: 100%;
+    margin-right: 8px;
+    display: flex;
+  }
+  
+  .footerSocialsContainer:hover{
+    background-color: rgb(255, 201, 6);
+    transform: scale(1.1);
+    transition: 0.5s;
+  }
+  
+  .footerSocials{
+    width: 18px;
+    margin: auto;
+  }
+  
+  .footerfacebook{
+    width: 12px;
+    margin: auto;
+  }
+  
+  
+  .footerBox2{
+    margin-top: 30px;
+  }
+  
+  .footerBox2 ul{
+    margin-left: 20px;
+    margin-top: 15px;
+    list-style-type: square white;
+  }
+  
+  .footerBox2 ul a{
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+  }
+  
+  .footerBox2 ul li{
+    padding-top: 8px;
+    letter-spacing: 1px;
+  }
+  
+  .footerBox2 ul li::marker{
+    color: white;
+  }
+  
+  .footerBox2 ul a:hover{
+    color: aqua;
+    cursor: grab;
+    transition: 0.5s;
+  }
+  
+  
+  .footerContactInfo hr{
+  
+    margin-top: 20px;
+  }
+  
+  .footerContactInfo li{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  .footerContactInfo p{
+    margin-left: 10px
+  }
+  
+  .footerImage{
+    width: 20px;
+  }
+  
+  .footerBox3{
+    margin-top: 30px;
+  }
+  
+  
+  #rights{
+    margin: auto;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    line-height: 25px;
+  }
+  
+  #rightsSpan{
+    color: rgb(255, 201, 6);
+  }
+
+
+
+
+
+  /* DESKTOP SIZE MEDIA QUERY */
+  /* DESKTOP SIZE MEDIA QUERY */
+
+
+  @media (min-width:980px){
+
+    #hamburgerMenu{
+      display: none;
+    }
+
+    #navigationContainer{
+      display: block;
+      background-color: transparent;
+      position: absolute;
+      width: auto;
+  
+    }
+
+    #navigationContainer ul{
+      display: flex;
+      list-style: none;
+    }
+  
+    #close{
+      display: none;
+    }
+
+    #navLinks{
+      padding: 10px 10px;
+    }
+  
+    #navigationContainer a{
+      font-weight: 600;
+    }
+
+    /* NAVIGATION ENDS HERE */
+
+
+    /* SLIDER STARTS HERE */
+
+    #slider-container{
+      max-width: 100%;
+    }
+
+    .slide{
+      height: 500px;
+    }
+  
+    #sliderImg{
+      width: 100%;
+    }
+  
+    .slide-text{
+      font-size: 45px;
+      line-height: 46px;
+    }
+  
+    #slide-button:hover{
+      background-color: rgb(255, 201, 255);
+      transition: 0.5s;
+    }
+
+    /* SLIDER ENDS HERE */
+
+
+  /* REVIEWS STARTS HERE */
+
+  #totalReviews{
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+    width: 1500px;
+    overflow: hidden;
+  }
+
+  #reviewsContainer {
+    flex-direction: row;
+    background-color: #26d48c;
+  }
+
+  #review{
+    padding: 60px 20px;
+    margin: auto;
+  }
+
+  #reviewNumber{
+    font-size: 30px;
+    color: #3636ff;
+  }
+
+  #reviewText{
+    color: white;
+  }
+
+     /* REVIEWS ENDS HERE */
+
+
+
+
+   /* ABOUT US STARTS HERE */
+
+   #aboutUs{
+    flex-direction: row;
+   }
+
+   #abouUsContainer{
+    display: flex;
+    width: 1500px;
+    overflow: hidden;
+    margin: auto;
+   }
+
+   #aboutInfoContainer{
+    margin-top: 0px;
+    margin-left: 50px;
+    width: 500px;
+   }
+
+   #aboutInfoContainer p{
+    margin-top: 12px;
+    color: #3d3d3d;
+   }
+
+   #aboutCompanyContainerSpan{
+    display: none;
+   }
+
+   ------------------------------------------
+
+   #aboutCompanyContainerSpan2{
+    width: 100%;
+    overflow: hidden;
+    margin: auto;
+    text-align: center;
+   }
+
+   #aboutCompanyContainerSpan2 h1{
+    text-align: center;
+    font-size: 37px;
+   }
+
+   #abouCompanyImg2{
+    display: none;
+   }
+
+   #aboutCompanyContainerSpan2 div{
+    width: 80%;
+    margin: auto;
+   }
+
+   #aboutCompanyContainerSpan2 p{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 18px;
+    width: 900px;
+    margin: auto;
+    text-align: center;
+   }
+
+   #aboutCompanyContainerSpan2 h1{
+    width: 800px;
+    margin: 30px auto 0px auto;
+
+   }
+
+   #aboutCompanyContainerSpan2 img{
+    padding: 50px 0px;
+   }
+
+    /* ABOUT US ENDS HERE */
+
+
+
+
+
+
+    /* FOOTER INFO STARTS HERE */
+
+    .footerSections{
+      flex-direction: row;
+      width: 1000px;
+      overflow: hidden;
+      justify-content: space-between;
+    }
+    
+    .footerBox{
+      width: 300px;
+    }
+    
+    .footerBox2{
+      margin-top: 0px;
+      padding-left: 80px;
+    }
+    
+    .footerBox3{
+      margin-top: 0px;
+      padding-left: 80px;
+    }
+
+
+
+
+
+
+
+
+
+
+  }
