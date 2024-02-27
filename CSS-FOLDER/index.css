@@ -1,15 +1,18 @@
+:root{
+  --bg-color:rgb(0, 17, 92);
+}
+
 *{
     margin: 0;
     padding: 0;
-    
+    webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
 }
 
-/* body{
-  overflow: hidden;
-} */
 
 #navContainer{
-    background-color: rgb(0, 17, 92);
+    background-color: var(--bg-color);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -17,7 +20,8 @@
     position: relative;
     overflow: hidden;
     z-index: 100;
-    border-bottom: 2px solid white;
+    height: 10vh;
+    border-bottom: 0.1rem solid white;
 }
 
 #brandLogo{
@@ -39,7 +43,7 @@
 }
 
 #hamburger{
-    width: 30px;
+    width: 50px;
     display: flex;
     align-items: center;
     padding: 18px 10px;
