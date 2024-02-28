@@ -59,12 +59,14 @@ function updateSlider() {
 
 let serviceBox = document.querySelectorAll('.serviceBox');
 
-const mouseoverFunc = e =>{
-  console.log(this);
+const mouseOverFunc = e =>{
+  console.log(e);
 }
 
 serviceBox.forEach(el => {
-  el.addEventListener("mouseover",mouseoverFunc)
+  el.style.backgroundColor = "green";
+  
+  el.addEventListener("mouseover", mouseOverFunc)
 });
 /*
 
