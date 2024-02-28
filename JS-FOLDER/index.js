@@ -1,3 +1,4 @@
+"use strict";
 // THIS CODE CONTROLS THE NAVIGATION BAR
 
 let hamburger = document.getElementById('hamburger');
@@ -58,7 +59,14 @@ function updateSlider() {
 
 let serviceBox = document.querySelectorAll('.serviceBox');
 
+const mouseoverFunc = e =>{
+  console.log(this);
+}
 
+serviceBox.forEach(el => {
+  el.addEventListener("mouseover",mouseoverFunc)
+});
+/*
 
 for (let i = 0; i <= serviceBox.length - 1; i++) {
   boxes = serviceBox[i];
@@ -150,7 +158,7 @@ for (let i = 0; i <= serviceBox.length - 1; i++) {
   })
 
 }
-
+*/
 /* SERVICES CODES ENDS HERE */
 
 
@@ -170,6 +178,7 @@ function showSlide(index) {
 
 function nextSlide() {
   testimonialcurrentIndex = (testimonialcurrentIndex + 1) % totalSlides;
+  console.log(testimonialcurrentIndex);
   showSlide(testimonialcurrentIndex);
 }
 
