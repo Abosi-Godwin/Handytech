@@ -1,13 +1,14 @@
 "use strict";
-// THIS CODE CONTROLS THE NAVIGATION BAR
+// element CODE CONTROLS THE NAVIGATION BAR
 
-let hamburger = document.getElementById('hamburger');
+const hamburger = document.getElementById('hamburger');
 
-let navigationContainer = document.getElementById('navigationContainer');
-let close = document.getElementById('close');
+const navigationContainer = document.getElementById('navigationContainer');
+const close = document.getElementById('close');
 
-let brandLogo = document.getElementById('brandLogo');
-
+const brandLogo = document.getElementById('brandLogo');
+const serviceTextsColor = "#fff";
+const transitionDuration = '0.5'; 
 
 hamburger.addEventListener('click', function() {
   navigationContainer.style.display = 'block';
@@ -23,7 +24,7 @@ close.addEventListener('click', function() {
 
 
 
-/* THIS CODER HERE IS FOR THE SLIDER */
+/* element CODER HERE IS FOR THE SLIDER */
 
 const slider = document.querySelector('.slider');
 const prevBtn = document.getElementById('prev');
@@ -52,70 +53,103 @@ function updateSlider() {
 
 
 
-/* THIS CODE HERE IS FOR SERVICES HOVERING COLOURS */
-/* THIS CODE HERE IS FOR SERVICES HOVERING COLOURS */
+/* element CODE HERE IS FOR SERVICES HOVERING COLOURS */
+/* element CODE HERE IS FOR SERVICES HOVERING COLOURS */
 
 
 
 const serviceContainer = document.querySelector('#serviceContainer');
 
-const mouseOverFunc = e => {
-const element = e.target;
-if (element.classList.contains("serviceBox")) {
-  console.log(element)
-} else {
-  console.log("selected")
-}
-}
+const mouseOverFunc = event => {
+  const targetElement = event.target;
+  
+  const selector = (element, className) => {
+  return  element.querySelector(className);
+  }
+  
+  if (targetElement.classList.contains("serviceBox")) {
+    
+    const serviceHeading = selector(targetElement, ".serviceHeading");
+    const serviceText = selector(targetElement, '.serviceText');
+    const serviceReadMore = selector(targetElement, '.serviceReadMore');
+    const serviceLink = selector(targetElement, '.serviceLink');
+    const backgroundDrop = selector(targetElement, '.backgroundDrop');
+    const serviceImg = selector(targetElement, '.serviceImg');
+   const serviceImgAlt = serviceImg.alt;
 
-//serviceBox.forEach(box => {
-  //box.style.backgroundColor = "green";
-  serviceContainer.addEventListener("mouseover", mouseOverFunc)
-//});
-
-/*
-
-for (let i = 0; i <= serviceBox.length - 1; i++) {
-  boxes = serviceBox[i];
-
-  boxes.addEventListener('mouseover', function() {
-    let serviceHeading = this.querySelector('.serviceHeading');
-    let serviceText = this.querySelector('.serviceText');
-    let serviceReadMore = this.querySelector('.serviceReadMore');
-    let serviceLink = this.querySelector('.serviceLink');
-    let backgroundDrop = this.querySelector('.backgroundDrop');
-    let serviceImg = this.querySelector('.serviceImg');
-
-
-    serviceText.style.color = 'white';
-    serviceText.style.transition = '0.5s';
-
-    serviceHeading.style.color = 'white';
-    serviceHeading.style.transition = '0.5s';
+    serviceText.style.color = serviceTextsColor;
+    serviceText.style.transition = transitionDuration;
+    serviceHeading.style.color = serviceTextsColor;
+    serviceHeading.style.transition = transitionDuration;
 
     serviceReadMore.style.backgroundColor = 'rgb(255, 201, 6)';
 
-    serviceReadMore.style.transition = '0.5s';
+    serviceReadMore.style.transition = transitionDuration;
+    serviceReadMore.style.color = 'black';
+    
+const changeImg = altValue => {
+  serviceImg.src = `/MEDIA-FOLDER/serviceImgs/${altValue}2.png`;
+}
+
+changeImg(serviceImgAlt);
+  }
+}
+
+
+serviceContainer.addEventListener("mouseover", mouseOverFunc)
+
+/*
+for (const i = 0; i <= serviceBox.length - 1; i++) {
+  boxes = serviceBox[i];
+
+  boxes.addEventListener('mouseover', function() {
+    const serviceHeading = element.querySelector('.serviceHeading');
+    const serviceText = element.querySelector('.serviceText');
+    const serviceReadMore = element.querySelector('.serviceReadMore');
+    const serviceLink = element.querySelector('.serviceLink');
+    const backgroundDrop = element.querySelector('.backgroundDrop');
+    const serviceImg = element.querySelector('.serviceImg');
+
+
+    serviceText.style.color = serviceTextsColor;
+    serviceText.style.transition = transitionDuration;
+
+    serviceHeading.style.color = serviceTextsColor;
+    serviceHeading.style.transition = transitionDuration;
+
+    serviceReadMore.style.backgroundColor = 'rgb(255, 201, 6)';
+
+    serviceReadMore.style.transition = transitionDuration;
     serviceReadMore.style.color = 'black';
 
     if (serviceImg.alt === 'webdev') {
       serviceImg.src = '/MEDIA-FOLDER/WEBDEV2.png';
-      serviceImg.style.transition = '0.5s';
-    } else if (serviceImg.alt === 'webdes') {
+      serviceImg.style.transition = transitionDuration;
+    } 
+    
+    if (serviceImg.alt === 'webdes') {
       serviceImg.src = '/MEDIA-FOLDER/WEBDESIGN2.png';
-      serviceImg.style.transition = '0.5s';
-    } else if (serviceImg.alt === 'network') {
+      serviceImg.style.transition = transitionDuration;
+    } 
+    
+    if (serviceImg.alt === 'network') {
       serviceImg.src = '/MEDIA-FOLDER/NETWORKING 1.png';
-      serviceImg.style.transition = '0.5s';
-    } else if (serviceImg.alt === 'graphic') {
+      serviceImg.style.transition = transitionDuration;
+    } 
+    
+    if (serviceImg.alt === 'graphic') {
       serviceImg.src = '/MEDIA-FOLDER/graphic design1.png';
-      serviceImg.style.transition = '0.5s';
-    } else if (serviceImg.alt === 'cyber') {
+      serviceImg.style.transition = transitionDuration;
+    } 
+    
+    if (serviceImg.alt === 'cyber') {
       serviceImg.src = '/MEDIA-FOLDER/CYBER SECURITY 1-1.png';
-      serviceImg.style.transition = '0.5s';
-    } else if (serviceImg.alt === 'video') {
+      serviceImg.style.transition = transitionDuration;
+    } 
+    
+    if (serviceImg.alt === 'video') {
       serviceImg.src = '/MEDIA-FOLDER/VIDEO ANIMATION 1.png';
-      serviceImg.style.transition = '0.5s';
+      serviceImg.style.transition = transitionDuration;
     }
 
   })
@@ -123,12 +157,12 @@ for (let i = 0; i <= serviceBox.length - 1; i++) {
 
 
   boxes.addEventListener('mouseout', function() {
-    let serviceHeading = this.querySelector('.serviceHeading');
-    let serviceText = this.querySelector('.serviceText');
-    let serviceReadMore = this.querySelector('.serviceReadMore');
-    let serviceLink = this.querySelector('.serviceLink');
-    let backgroundDrop = this.querySelector('.backgroundDrop');
-    let serviceImg = this.querySelector('.serviceImg');
+    const serviceHeading = element.querySelector('.serviceHeading');
+    const serviceText = element.querySelector('.serviceText');
+    const serviceReadMore = element.querySelector('.serviceReadMore');
+    const serviceLink = element.querySelector('.serviceLink');
+    const backgroundDrop = element.querySelector('.backgroundDrop');
+    const serviceImg = element.querySelector('.serviceImg');
 
 
     serviceText.style.color = '';
@@ -144,22 +178,32 @@ for (let i = 0; i <= serviceBox.length - 1; i++) {
 
     if (serviceImg.alt === 'webdev') {
       serviceImg.src = '/MEDIA-FOLDER/WEBDEV1.png';
-      serviceImg.style.transition = '0.5s';
-    } else if (serviceImg.alt === 'webdes') {
+      serviceImg.style.transition = transitionDuration;
+    } 
+    
+    if (serviceImg.alt === 'webdes') {
       serviceImg.src = '/MEDIA-FOLDER/WEBDESIGN1.png';
-      serviceImg.style.transition = '0.5s';
-    } else if (serviceImg.alt === 'network') {
+      serviceImg.style.transition = transitionDuration;
+    } 
+    
+    if (serviceImg.alt === 'network') {
       serviceImg.src = '/MEDIA-FOLDER/NETWORKING 2.png';
-      serviceImg.style.transition = '0.5s';
-    } else if (serviceImg.alt === 'graphic') {
+      serviceImg.style.transition = transitionDuration;
+    } 
+    
+    if (serviceImg.alt === 'graphic') {
       serviceImg.src = '/MEDIA-FOLDER/graphicdesign2.png';
-      serviceImg.style.transition = '0.5s';
-    } else if (serviceImg.alt === 'cyber') {
+      serviceImg.style.transition = transitionDuration;
+    } 
+    
+    if (serviceImg.alt === 'cyber') {
       serviceImg.src = '/MEDIA-FOLDER/CYBER SECURITY 1.png';
-      serviceImg.style.transition = '0.5s';
-    } else if (serviceImg.alt === 'video') {
+      serviceImg.style.transition = transitionDuration;
+    } 
+    
+    if (serviceImg.alt === 'video') {
       serviceImg.src = '/MEDIA-FOLDER/VIDEO ANIMATION 2.png';
-      serviceImg.style.transition = '0.5s';
+      serviceImg.style.transition = transitionDuration;
     }
 
   })
@@ -172,7 +216,7 @@ for (let i = 0; i <= serviceBox.length - 1; i++) {
 
 
 
-/* THIS CODE HERE IS FOR TESTIMONIALS */
+/* element CODE HERE IS FOR TESTIMONIALS */
 
 let testimonialcurrentIndex = 0;
 const slides = document.querySelectorAll('.testimonialslide');
@@ -201,13 +245,13 @@ function prevSlide() {
 
 
 
-/* THIS CODE HERE IS FOR REVIEWS */
+/* element CODE HERE IS FOR REVIEWS */
 
 
-let customerNumber = document.querySelector(".customerNumber");
-let businessNumber = document.querySelector(".businessNumber");
-let clientsNumber = document.querySelector(".clientsNumber");
-let reviewsNumber = document.querySelector(".reviewsNumber");
+const customerNumber = document.querySelector(".customerNumber");
+const businessNumber = document.querySelector(".businessNumber");
+const clientsNumber = document.querySelector(".clientsNumber");
+const reviewsNumber = document.querySelector(".reviewsNumber");
 let customerinner = 0;
 
 function add() {
@@ -221,7 +265,7 @@ counter4();
 
 function counter1() {
 
-  let countdownId = setInterval(function run() {
+  const countdownId = setInterval(function run() {
 
     customerNumber.innerText = customerinner;
     add();
@@ -237,7 +281,7 @@ function counter1() {
 }
 
 function counter2() {
-  let countdownId2 = setInterval(function run2() {
+  const countdownId2 = setInterval(function run2() {
 
     businessNumber.innerText = customerinner;
     add();
@@ -254,7 +298,7 @@ function counter2() {
 
 
 function counter3() {
-  let countdownId3 = setInterval(function run3() {
+  const countdownId3 = setInterval(function run3() {
     clientsNumber.innerText = customerinner;
 
     add();
@@ -280,7 +324,7 @@ function counter4() {
     emeka++
   }
 
-  let countdownId4 = setInterval(function run4() {
+  const countdownId4 = setInterval(function run4() {
     reviewsNumber.innerText = emeka;
 
     eme();
