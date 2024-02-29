@@ -57,17 +57,22 @@ function updateSlider() {
 
 
 
-let serviceBox = document.querySelectorAll('.serviceBox');
+const serviceContainer = document.querySelector('#serviceContainer');
 
-const mouseOverFunc = e =>{
-  console.log(e);
+const mouseOverFunc = e => {
+const element = e.target;
+if (element.classList.contains("serviceBox")) {
+  console.log(element)
+} else {
+  console.log("selected")
+}
 }
 
-serviceBox.forEach(el => {
-  el.style.backgroundColor = "green";
-  
-  el.addEventListener("mouseover", mouseOverFunc)
-});
+//serviceBox.forEach(box => {
+  //box.style.backgroundColor = "green";
+  serviceContainer.addEventListener("mouseover", mouseOverFunc)
+//});
+
 /*
 
 for (let i = 0; i <= serviceBox.length - 1; i++) {

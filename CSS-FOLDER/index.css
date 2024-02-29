@@ -290,7 +290,9 @@
 
   
 /* THIS CODE HERE IS FOR OUR SERVICES */
-
+#serviceContainer{
+  border: 1px solid #000;
+}
 
 #ourService{
     margin: 70px auto;
@@ -328,13 +330,16 @@
     background-color: #ffffff;
     position: relative;
     transition: background-color 0.5s ease-in-out;
+    background: pink;
 }
-
- .serviceBox:hover{
+.serviceBox *{
+  border: 1px solid #000;
+}
+ .serviceBox.hover{
     background-color: rgb(0, 17, 92);
 } 
 
-.backgroundDrop{
+.serviceBox.hover .backgroundDrop{
     position: absolute;
     top: -100%;
     left: 0;
@@ -347,7 +352,7 @@
     align-items: center;
 }
 
-.serviceBox:hover .backgroundDrop{
+.serviceBox.hover .backgroundDrop{
     top: 0;
 }
 
