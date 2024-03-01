@@ -1,5 +1,6 @@
 :root{
   --bg-color:rgb(0, 17, 92);
+  --linear-bg: linear-gradient(125deg, rgba(20, 49, 83, 1), rgba(20, 49, 83, 0.75), rgba(20, 49, 83, 0.10));
 }
 
 *{
@@ -21,7 +22,6 @@
     overflow: hidden;
     z-index: 100;
     height: 10vh;
-    border-bottom: 0.1rem solid white;
 }
 
 #brandLogo{
@@ -105,44 +105,110 @@
 
 /* THIS CODE HERE IS FOR THE SLIDER */
 
+
+
   #slider-container {
     position: relative;
     overflow: hidden;
     width: 100vw;
     height: 60vh;
     max-width: 600px;
-    margin: auto;
   }
+  
+.slider {
+  display: flex;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  transition: all 1s;
+}
+
+.slide {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-blend-mode: overlay;
+  -webkit-background-size: contain;
+  background-size: contain;
+  background-position: center;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.slide.one{
+  background: url("/MEDIA-FOLDER/carouselimgs/carousel-1.jpeg"), var(--linear-bg);
+}
+
+.slide.two{
+  background: url("/MEDIA-FOLDER/carouselimgs/carousel-2.jpeg"), var(--linear-bg);
+}
+
+.slide.three{
+  background: url("/MEDIA-FOLDER/carouselimgs/carousel-3.jpeg"), var(--linear-bg);
+}
+
+.slide.four{
+  background: url("/MEDIA-FOLDER/carouselimgs/carousel-4.jpeg"), var(--linear-bg);
+}
+
+  
+  /*
   .slider{
     height: 100%;
     width: 100%;
     overflow: hidden;
+    padding: fixed;
     border: 2px solid green;
     transition: transform 0.5s ease-in-out;
-    background: blueviolet;
   }
   .slide{
   height: 100%;
-  width: 100vw;
+  width: 100%;
   background-blend-mode: overlay;
   -webkit-background-size: cover;
   background-size: cover;
   background-position: center;
   color: #fff;
-  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 1px solid red;
+  transition: transform 0.5s ease-in-out;
+  bordter: 1px solid red;
   }
   
-.slide.one{
-  background: url("/MEDIA-FOLDER/carouselimgs/carousel-1.jpeg"), linear-gradient(125deg, rgba(20, 49, 83, 1), rgba(20, 49, 83, 0.75), rgba(20, 49, 83, 0.10));
-  
-} 
+
+.sliders {
+  display: flex;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  height: 80%;
+  align-items: center;
+  justify-content: center;
+}
+
+.sliders .slider {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  color: #fff;
+  transition: all 1s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .slide.two{
   background: url("/MEDIA-FOLDER/carouselimgs/carousel-2.jpeg"), linear-gradient(125deg, rgba(20, 49, 83, 1), rgba(20, 49, 83, 0.75), rgba(20, 49, 83, 0.10));
-  
+  -webkit-transform: translateX(200%);
+  -moz-transform: translateX(200%);
+  -ms-transform: translateX(200%);
+  -o-transform: translateX(200%);
+  transform: translateX(200%);
+  borde6r: 1px solid red;
 } 
 .slide.three{
   background: url("/MEDIA-FOLDER/carouselimgs/carousel-3.jpeg"), linear-gradient(125deg, rgba(20, 49, 83, 1), rgba(20, 49, 83, 0.75), rgba(20, 49, 83, 0.10));
@@ -178,7 +244,7 @@
     font-size: 17px;
     cursor: grab;
   }
-
+*/
   
 /*
   .slider {

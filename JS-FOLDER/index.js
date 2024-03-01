@@ -37,16 +37,18 @@ function showSlide(elementToSlide, index) {
 /* element CODER HERE IS FOR THE SLIDER */
 
 const slider = document.querySelector('.slider');
-const reviews = document.querySelectorAll(".slide");
+const sliders = document.querySelectorAll(".slide");
 const sliderPrevBtn = document.getElementById('prev');
 const sliderNextBtn = document.getElementById('next');
-const reviewNextBtn = document.getElementById('reviewNextBtn');
-const reviewPrevBtn = document.getElementById('reviewPrevBtn');
+const slideNextBtn = document.getElementById('reviewNextBtn');
+const slidePrevBtn = document.getElementById('reviewPrevBtn');
 
 const sliding = () => {
 
-  reviews.forEach((review, i) => {
-    review.style.transform = `translateX(${100 * (i - sliderCurrentIndex)}%)`;
+  sliders.forEach((slide, i) => {
+    const transformVal = `translateX(${100 * (i - sliderCurrentIndex)}%)`;
+    console.log(transformVal);
+    slide.style.transform = transformVal;
     
   });
 }
@@ -137,12 +139,12 @@ serviceContainer.addEventListener("mouseout", target =>{
 /* element CODE HERE IS FOR TESTIMONIALS */
 
 
-reviewNextBtn.addEventListener("click", () => {
+slideNextBtn.addEventListener("click", () => {
   sliderCurrentIndex = (sliderCurrentIndex + 1) % totalSlides;
   showSlide(".testimonialslider", sliderCurrentIndex);
 })
 
-reviewPrevBtn.addEventListener("click", ()=> {
+slidePrevBtn.addEventListener("click", ()=> {
   sliderCurrentIndex = (sliderCurrentIndex - 1 + totalSlides) % totalSlides;
   showSlide(".testimonialslider", sliderCurrentIndex);
 })
@@ -154,13 +156,13 @@ reviewPrevBtn.addEventListener("click", ()=> {
 
 
 
-/* element CODE HERE IS FOR REVIEWS */
+/* element CODE HERE IS FOR sliders */
 
 
 const customerNumber = document.querySelector(".customerNumber");
 const businessNumber = document.querySelector(".businessNumber");
 const clientsNumber = document.querySelector(".clientsNumber");
-const reviewsNumber = document.querySelector(".reviewsNumber");
+const slidersNumber = document.querySelector(".slidersNumber");
 let customerinner = 0;
 
 function add() {
@@ -234,13 +236,13 @@ function counter4() {
   }
 
   const countdownId4 = setInterval(function run4() {
-    reviewsNumber.innerText = emeka;
+    slidersNumber.innerText = emeka;
 
     eme();
 
-    if (reviewsNumber.innerText === '5') {
+    if (slidersNumber.innerText === '5') {
       clearInterval(countdownId4);
-      reviewsNumber.innerText = 5;
+      slidersNumber.innerText = 5;
     };
   }, 30)
 
