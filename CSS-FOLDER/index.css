@@ -107,13 +107,13 @@
 
   #slider-container {
     position: relative;
-    overflow: hidden;
-    width: 100%;
+    overrflow: hidden;
+    width: 100vw;
+    height: 60vh;
     max-width: 600px;
     margin: auto;
-    background-color: black;
   }
-
+/*
   .slider {
     display: flex;
     transition: transform 0.5s ease-in-out;
@@ -123,22 +123,30 @@
     min-width: 100%;
     box-sizing: border-box;
     position: relative;
+    height: 100%;
+    background: #000;
   }
-
+.slide.one{
+  width: 100vw;
+  height: 80%;
+  background: red;
+  border: 1px solid red;
+  margin: 2rem 0;
+}
   #sliderImg {
-    width: 130%;
-    height: auto;
+    width: 100%;
+    height: 40vh;
     opacity: 0.35;
     
   }
 
   .slide-text {
-    position: absolute;
+    posietion: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
-    color: #ffffff;
+    color: rebeccapurple;
     font-size: 29px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-weight: bold;
@@ -157,7 +165,7 @@
     cursor: grab;
   }
 
-
+*/
   #prev, #next {
     position: absolute;
     top: 50%;
@@ -184,17 +192,29 @@
 
   #reviewsContainer{
     width: 100%;
+    height: 30vh;
     overflow: hidden;
+    padding: 0.5rem;
     /* background-color: rgb(6, 246, 255); */
     background-color: rgb(224, 224, 224);
-    display: flex;
-    flex-direction: column;
+   /* display: flex;
+    flex-direction: column;*/
+    background: #e9ecef;
   }
-
+#totalReviews{
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  grid-gap: 0.7rem;
+}
   #review{
     display: flex;
     padding: 7px 10px;
-    align-items: start;
+    align-items: center;
+    flex-direction: column;
+    border: 1px solid var(--bg-color);
+    -webkit-border-radius: 0.4rem;
+    -moz-border-radius: 0.4rem;
+    border-radius: 0.4rem;
   }
 
   #reviewNumber{
@@ -205,11 +225,10 @@
   }
 
   #reviewText{
-    font-size: 19px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    padding-left: 17px;
-    font-weight: bold;
+    font-w5eight: bold;
     color: rgb(43, 43, 43); 
+    text-align: center;
   }
 
   /* END OF REVIEWS CODE */

@@ -156,10 +156,10 @@ function add() {
   customerinner++;
 }
 
-counter1();
+/*counter1();
 counter2();
 counter3();
-counter4();
+counter4();*/
 
 function counter1() {
 
