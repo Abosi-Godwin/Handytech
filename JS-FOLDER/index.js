@@ -37,10 +37,21 @@ function showSlide(elementToSlide, index) {
 /* element CODER HERE IS FOR THE SLIDER */
 
 const slider = document.querySelector('.slider');
+const reviews = document.querySelectorAll(".slide");
 const sliderPrevBtn = document.getElementById('prev');
 const sliderNextBtn = document.getElementById('next');
 const reviewNextBtn = document.getElementById('reviewNextBtn');
 const reviewPrevBtn = document.getElementById('reviewPrevBtn');
+
+const sliding = () => {
+
+  reviews.forEach((review, i) => {
+    review.style.transform = `translateX(${100 * (i - sliderCurrentIndex)}%)`;
+    
+  });
+}
+
+sliding();
 
 
 sliderNextBtn.addEventListener('click', () => {

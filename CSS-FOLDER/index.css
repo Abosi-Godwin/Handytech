@@ -107,16 +107,82 @@
 
   #slider-container {
     position: relative;
-    overrflow: hidden;
+    overflow: hidden;
     width: 100vw;
     height: 60vh;
     max-width: 600px;
     margin: auto;
   }
+  .slider{
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    border: 2px solid green;
+    transition: transform 0.5s ease-in-out;
+    background: blueviolet;
+  }
+  .slide{
+  height: 100%;
+  width: 100vw;
+  background-blend-mode: overlay;
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid red;
+  }
+  
+.slide.one{
+  background: url("/MEDIA-FOLDER/carouselimgs/carousel-1.jpeg"), linear-gradient(125deg, rgba(20, 49, 83, 1), rgba(20, 49, 83, 0.75), rgba(20, 49, 83, 0.10));
+  
+} 
+.slide.two{
+  background: url("/MEDIA-FOLDER/carouselimgs/carousel-2.jpeg"), linear-gradient(125deg, rgba(20, 49, 83, 1), rgba(20, 49, 83, 0.75), rgba(20, 49, 83, 0.10));
+  
+} 
+.slide.three{
+  background: url("/MEDIA-FOLDER/carouselimgs/carousel-3.jpeg"), linear-gradient(125deg, rgba(20, 49, 83, 1), rgba(20, 49, 83, 0.75), rgba(20, 49, 83, 0.10));
+  
+} 
+.slide.four{
+  background: url("/MEDIA-FOLDER/carouselimgs/carousel-4.jpeg"), linear-gradient(125deg, rgba(20, 49, 83, 1), rgba(20, 49, 83, 0.75), rgba(20, 49, 83, 0.10));
+  
+}
+  .slide-text {
+    text-align: center;
+    color: #ffffff;
+    font-size: 29px;
+    height: 40%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-transform: uppercase;
+    font-weight: bold;
+    line-height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-direction: column;
+  }
+
+  #slide-button{
+    padding: 8px 12px;
+    border-radius: 0.5rem;
+    margin-top: 20px;
+    border: none;
+    background-color: rgb(255, 201, 6);
+    color: black;
+    font-weight: bold;
+    font-size: 17px;
+    cursor: grab;
+  }
+
+  
 /*
   .slider {
     display: flex;
-    transition: transform 0.5s ease-in-out;
   }
 
   .slide {
@@ -139,32 +205,6 @@
     opacity: 0.35;
     
   }
-
-  .slide-text {
-    posietion: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    color: rebeccapurple;
-    font-size: 29px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-weight: bold;
-    line-height: 35px;
-  }
-
-  #slide-button{
-    padding: 8px 12px;
-    border-radius: 100px;
-    margin-top: 20px;
-    border: none;
-    background-color: rgb(255, 201, 6);
-    color: black;
-    font-weight: bold;
-    font-size: 17px;
-    cursor: grab;
-  }
-
 */
   #prev, #next {
     position: absolute;
@@ -200,11 +240,15 @@
    /* display: flex;
     flex-direction: column;*/
     background: #e9ecef;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 #totalReviews{
   display: grid;
   grid-template-columns: repeat(2,1fr);
   grid-gap: 0.7rem;
+  padding: 0 0.5rem;
 }
   #review{
     display: flex;
