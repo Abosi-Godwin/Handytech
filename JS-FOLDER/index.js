@@ -7,9 +7,9 @@ const navigationContainer = document.getElementById('navigationContainer');
 const close = document.getElementById('close');
 
 const brandLogo = document.getElementById('brandLogo');
-const serviceTextsColor = "#fff";
-const transitionDuration = '0.5'; 
-
+let serviceTextsColor = "#fff";
+let transitionDuration = '0.5'; 
+let imgNumb = 2;
 hamburger.addEventListener('click', function() {
   navigationContainer.style.display = 'block';
 });
@@ -34,17 +34,18 @@ let currentIndex = 0;
 
 nextBtn.addEventListener('click', () => {
   currentIndex = (currentIndex + 1) % slider.children.length;
-  updateSlider();
+  console.log(currentIndex)
+  updateSlider(currentIndex);
 });
 
 prevBtn.addEventListener('click', () => {
-  currentIndex = (currentIndex - 1 + slider.children.length) % slider.children.length;
+  currentIndex = (0 - 1 + slider.children.length) % slider.children.length;
   updateSlider();
 });
 
-function updateSlider() {
-  const translateValue = -currentIndex * 100 + '%';
-  slider.style.transform = 'translateX(' + translateValue + ')';
+function updateSlider(index) {
+  const translateValue = `${-index * 100}%`;
+  slider.style.transform = `translateX(${translateValue})`;
 }
 
 /* SLIDER ENDS HERE */
@@ -60,157 +61,66 @@ function updateSlider() {
 
 const serviceContainer = document.querySelector('#serviceContainer');
 
-const mouseOverFunc = event => {
+const mouseHoverFunc = (event, funcObj) => {
+  
   const targetElement = event.target;
+  const {color,transitionDur,imgNum,btnBg} = funcObj;
   
   const selector = (element, className) => {
   return  element.querySelector(className);
   }
   
-  if (targetElement.classList.contains("serviceBox")) {
+  const colorElemenets = element => {
     
-    const serviceHeading = selector(targetElement, ".serviceHeading");
-    const serviceText = selector(targetElement, '.serviceText');
-    const serviceReadMore = selector(targetElement, '.serviceReadMore');
-    const serviceLink = selector(targetElement, '.serviceLink');
-    const backgroundDrop = selector(targetElement, '.backgroundDrop');
-    const serviceImg = selector(targetElement, '.serviceImg');
-   const serviceImgAlt = serviceImg.alt;
-
-    serviceText.style.color = serviceTextsColor;
-    serviceText.style.transition = transitionDuration;
-    serviceHeading.style.color = serviceTextsColor;
-    serviceHeading.style.transition = transitionDuration;
-
-    serviceReadMore.style.backgroundColor = 'rgb(255, 201, 6)';
-
-    serviceReadMore.style.transition = transitionDuration;
-    serviceReadMore.style.color = 'black';
+    if (element.classList.contains('serviceReadMore')) {
+      element.style.transition = transitionDur;
+      element.style.backgroundColor = btnBg;
+    }
+    element.style.color = color;
+    element.style.transition = transitionDur;
     
-const changeImg = altValue => {
-  serviceImg.src = `/MEDIA-FOLDER/serviceImgs/${altValue}2.png`;
-}
-
-changeImg(serviceImgAlt);
   }
+  
+  if (targetElement.classList.contains("serviceBox")) {
+  
+    colorElemenets(selector(targetElement, ".serviceHeading"));
+    colorElemenets(selector(targetElement, ".serviceText"));
+    colorElemenets(selector(targetElement, ".serviceReadMore"));
+    
+    const serviceImg = selector(targetElement, '.serviceImg');
+   
+const changeImg = altValue => {
+  serviceImg.src = `/MEDIA-FOLDER/serviceImgs/${altValue}${imgNum}.png`;
+  
 }
 
-
-serviceContainer.addEventListener("mouseover", mouseOverFunc)
-
-/*
-for (const i = 0; i <= serviceBox.length - 1; i++) {
-  boxes = serviceBox[i];
-
-  boxes.addEventListener('mouseover', function() {
-    const serviceHeading = element.querySelector('.serviceHeading');
-    const serviceText = element.querySelector('.serviceText');
-    const serviceReadMore = element.querySelector('.serviceReadMore');
-    const serviceLink = element.querySelector('.serviceLink');
-    const backgroundDrop = element.querySelector('.backgroundDrop');
-    const serviceImg = element.querySelector('.serviceImg');
-
-
-    serviceText.style.color = serviceTextsColor;
-    serviceText.style.transition = transitionDuration;
-
-    serviceHeading.style.color = serviceTextsColor;
-    serviceHeading.style.transition = transitionDuration;
-
-    serviceReadMore.style.backgroundColor = 'rgb(255, 201, 6)';
-
-    serviceReadMore.style.transition = transitionDuration;
-    serviceReadMore.style.color = 'black';
-
-    if (serviceImg.alt === 'webdev') {
-      serviceImg.src = '/MEDIA-FOLDER/WEBDEV2.png';
-      serviceImg.style.transition = transitionDuration;
-    } 
-    
-    if (serviceImg.alt === 'webdes') {
-      serviceImg.src = '/MEDIA-FOLDER/WEBDESIGN2.png';
-      serviceImg.style.transition = transitionDuration;
-    } 
-    
-    if (serviceImg.alt === 'network') {
-      serviceImg.src = '/MEDIA-FOLDER/NETWORKING 1.png';
-      serviceImg.style.transition = transitionDuration;
-    } 
-    
-    if (serviceImg.alt === 'graphic') {
-      serviceImg.src = '/MEDIA-FOLDER/graphic design1.png';
-      serviceImg.style.transition = transitionDuration;
-    } 
-    
-    if (serviceImg.alt === 'cyber') {
-      serviceImg.src = '/MEDIA-FOLDER/CYBER SECURITY 1-1.png';
-      serviceImg.style.transition = transitionDuration;
-    } 
-    
-    if (serviceImg.alt === 'video') {
-      serviceImg.src = '/MEDIA-FOLDER/VIDEO ANIMATION 1.png';
-      serviceImg.style.transition = transitionDuration;
-    }
-
-  })
-
-
-
-  boxes.addEventListener('mouseout', function() {
-    const serviceHeading = element.querySelector('.serviceHeading');
-    const serviceText = element.querySelector('.serviceText');
-    const serviceReadMore = element.querySelector('.serviceReadMore');
-    const serviceLink = element.querySelector('.serviceLink');
-    const backgroundDrop = element.querySelector('.backgroundDrop');
-    const serviceImg = element.querySelector('.serviceImg');
-
-
-    serviceText.style.color = '';
-    serviceText.style.transition = '';
-
-    serviceHeading.style.color = '';
-    serviceHeading.style.transition = '';
-
-    serviceReadMore.style.backgroundColor = '';
-    serviceReadMore.style.transition = '';
-    serviceReadMore.style.color = '';
-
-
-    if (serviceImg.alt === 'webdev') {
-      serviceImg.src = '/MEDIA-FOLDER/WEBDEV1.png';
-      serviceImg.style.transition = transitionDuration;
-    } 
-    
-    if (serviceImg.alt === 'webdes') {
-      serviceImg.src = '/MEDIA-FOLDER/WEBDESIGN1.png';
-      serviceImg.style.transition = transitionDuration;
-    } 
-    
-    if (serviceImg.alt === 'network') {
-      serviceImg.src = '/MEDIA-FOLDER/NETWORKING 2.png';
-      serviceImg.style.transition = transitionDuration;
-    } 
-    
-    if (serviceImg.alt === 'graphic') {
-      serviceImg.src = '/MEDIA-FOLDER/graphicdesign2.png';
-      serviceImg.style.transition = transitionDuration;
-    } 
-    
-    if (serviceImg.alt === 'cyber') {
-      serviceImg.src = '/MEDIA-FOLDER/CYBER SECURITY 1.png';
-      serviceImg.style.transition = transitionDuration;
-    } 
-    
-    if (serviceImg.alt === 'video') {
-      serviceImg.src = '/MEDIA-FOLDER/VIDEO ANIMATION 2.png';
-      serviceImg.style.transition = transitionDuration;
-    }
-
-  })
-
+changeImg(serviceImg.alt);
+  }
+  
+  
+  
 }
-*/
-/* SERVICES CODES ENDS HERE */
+
+serviceContainer.addEventListener("mouseover", target => {
+  const tools = {
+    transitionDur: transitionDuration,
+    color: serviceTextsColor,
+    imgNum: imgNumb,
+    btnBg: "#F89E00",
+  }
+  mouseHoverFunc(target,tools);
+});
+
+serviceContainer.addEventListener("mouseout", target =>{
+  
+  const tools = {
+    transitionDur: "",
+    color: "",
+    imgNum: 1,
+    btnBg: "",
+  }
+  mouseHoverFunc(target,tools);
+});
 
 
 
@@ -229,7 +139,6 @@ function showSlide(index) {
 
 function nextSlide() {
   testimonialcurrentIndex = (testimonialcurrentIndex + 1) % totalSlides;
-  console.log(testimonialcurrentIndex);
   showSlide(testimonialcurrentIndex);
 }
 
