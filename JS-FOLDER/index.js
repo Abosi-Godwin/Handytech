@@ -1,65 +1,62 @@
 "use strict";
 // element CODE CONTROLS THE NAVIGATION BAR
 
-const hamburger = document.getElementById('hamburger');
-
-const navigationContainer = document.getElementById('navigationContainer');
+// Selecting the needed elements
 const close = document.getElementById('close');
-
+const hamburger = document.getElementById('hamburger');
+const navigationContainer = document.getElementById('navigationContainer');
+const serviceContainer = document.querySelector('#serviceContainer');
 const brandLogo = document.getElementById('brandLogo');
+const slides = document.querySelectorAll('.testimonialslide');
+
+// creating state variables
 let serviceTextsColor = "#fff";
 let transitionDuration = '0.5'; 
 let imgNumb = 2;
+let sliderCurrentIndex = 0;
+const totalSlides = slides.length;
+
+
+
 hamburger.addEventListener('click', function() {
-  navigationContainer.style.display = 'block';
+  navigationContainer.classList.add("open");
 });
 
 close.addEventListener('click', function() {
-  navigationContainer.style.display = 'none';
+  navigationContainer.classList.remove("open");
 })
 
 /* NAVIGATION ENDS HERE */
 
-
-
+/* General function for the two sliders */
+function showSlide(elementToSlide, index) {
+  document.querySelector(elementToSlide).style.transform = `translateX(${-index * 100}%)`;
+}
 
 
 /* element CODER HERE IS FOR THE SLIDER */
 
 const slider = document.querySelector('.slider');
-const prevBtn = document.getElementById('prev');
-const nextBtn = document.getElementById('next');
+const sliderPrevBtn = document.getElementById('prev');
+const sliderNextBtn = document.getElementById('next');
+const reviewNextBtn = document.getElementById('reviewNextBtn');
+const reviewPrevBtn = document.getElementById('reviewPrevBtn');
 
-let currentIndex = 0;
 
-nextBtn.addEventListener('click', () => {
-  currentIndex = (currentIndex + 1) % slider.children.length;
-  console.log(currentIndex)
-  updateSlider(currentIndex);
+sliderNextBtn.addEventListener('click', () => {
+  sliderCurrentIndex = (sliderCurrentIndex + 1) % slider.children.length;
+  showSlide(".slider", sliderCurrentIndex);
 });
 
-prevBtn.addEventListener('click', () => {
-  currentIndex = (0 - 1 + slider.children.length) % slider.children.length;
-  updateSlider();
+sliderPrevBtn.addEventListener('click', () => {
+  sliderCurrentIndex = (sliderCurrentIndex - 1 + slider.children.length) % slider.children.length;
+  showSlide(".slider", sliderCurrentIndex);
 });
-
-function updateSlider(index) {
-  const translateValue = `${-index * 100}%`;
-  slider.style.transform = `translateX(${translateValue})`;
-}
 
 /* SLIDER ENDS HERE */
 
 
-
-
-
 /* element CODE HERE IS FOR SERVICES HOVERING COLOURS */
-/* element CODE HERE IS FOR SERVICES HOVERING COLOURS */
-
-
-
-const serviceContainer = document.querySelector('#serviceContainer');
 
 const mouseHoverFunc = (event, funcObj) => {
   
@@ -128,24 +125,16 @@ serviceContainer.addEventListener("mouseout", target =>{
 
 /* element CODE HERE IS FOR TESTIMONIALS */
 
-let testimonialcurrentIndex = 0;
-const slides = document.querySelectorAll('.testimonialslide');
-const totalSlides = slides.length;
 
-function showSlide(index) {
-  const newPosition = -index * 100 + '%';
-  document.querySelector('.testimonialslider').style.transform = 'translateX(' + newPosition + ')';
-}
+reviewNextBtn.addEventListener("click", () => {
+  sliderCurrentIndex = (sliderCurrentIndex + 1) % totalSlides;
+  showSlide(".testimonialslider", sliderCurrentIndex);
+})
 
-function nextSlide() {
-  testimonialcurrentIndex = (testimonialcurrentIndex + 1) % totalSlides;
-  showSlide(testimonialcurrentIndex);
-}
-
-function prevSlide() {
-  testimonialcurrentIndex = (testimonialcurrentIndex - 1 + totalSlides) % totalSlides;
-  showSlide(testimonialcurrentIndex);
-}
+reviewPrevBtn.addEventListener("click", ()=> {
+  sliderCurrentIndex = (sliderCurrentIndex - 1 + totalSlides) % totalSlides;
+  showSlide(".testimonialslider", sliderCurrentIndex);
+})
 
 /* TESTIMONIAL CODE ENDS HERE */
 

@@ -60,10 +60,13 @@
     position: fixed;
     height: 100vh;
     top: 0;
-    right: 0;
-    display: none;
+    right: -100%;
     z-index: 100;
-
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
 }
 
 #navigationContainer ul{
@@ -90,7 +93,9 @@
     color: rgb(255, 201, 6);
     transition: 0.8s;
 }
-
+#navigationContainer.open{
+  right: 0;
+}
 /* NAVIGATION ENDS HERE */
 
 
@@ -290,9 +295,6 @@
 
   
 /* THIS CODE HERE IS FOR OUR SERVICES */
-#serviceContainer{
-  border: 1px solid #000;
-}
 
 #ourService{
     margin: 70px auto;
@@ -332,12 +334,7 @@
     transition: background-color 0.5s ease-in-out;
     padding: 2rem;
 }
-.servicedBox *{
-  background: #fff;
-  -webkit-border-radius: 0.4rem;
-  -moz-border-radius: 0.4rem;
-  border-radius: 0.4rem;
-}
+
  .serviceBox:hover{
     background-color: rgb(0, 17, 92);
 } 
