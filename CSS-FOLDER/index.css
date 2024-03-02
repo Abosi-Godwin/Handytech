@@ -12,6 +12,16 @@
 }
 
 
+h1, h2, h3, h4 {
+  font-family: "Oswald", sans-serif;
+  font-style: normal;
+}
+p, button{
+  font-family: "Lora", serif;
+  font-style: normal;
+}
+
+
 #navContainer{
     background-color: var(--bg-color);
     display: flex;
@@ -32,7 +42,6 @@
 }
 #brandLogo p{
     color: white;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-weight: bold;
     font-size: 20px;
 }
@@ -80,7 +89,6 @@
 #navigationContainer a{
     text-decoration: none;
     color: white;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 18px;
     font-weight: bold;
     letter-spacing: 1px;
@@ -155,82 +163,15 @@
   background: url("/MEDIA-FOLDER/carouselimgs/carousel-4.jpeg"), var(--linear-bg);
 }
 
-  
-  /*
-  .slider{
-    height: 100%;
-    width: 100%;
-    overflow: hidden;
-    padding: fixed;
-    border: 2px solid green;
-    transition: transform 0.5s ease-in-out;
-  }
-  .slide{
-  height: 100%;
-  width: 100%;
-  background-blend-mode: overlay;
-  -webkit-background-size: cover;
-  background-size: cover;
-  background-position: center;
-  color: #fff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: transform 0.5s ease-in-out;
-  bordter: 1px solid red;
-  }
-  
-
-.sliders {
-  display: flex;
-  overflow: hidden;
-  position: relative;
-  width: 100%;
-  height: 80%;
-  align-items: center;
-  justify-content: center;
-}
-
-.sliders .slider {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  color: #fff;
-  transition: all 1s;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.slide.two{
-  background: url("/MEDIA-FOLDER/carouselimgs/carousel-2.jpeg"), linear-gradient(125deg, rgba(20, 49, 83, 1), rgba(20, 49, 83, 0.75), rgba(20, 49, 83, 0.10));
-  -webkit-transform: translateX(200%);
-  -moz-transform: translateX(200%);
-  -ms-transform: translateX(200%);
-  -o-transform: translateX(200%);
-  transform: translateX(200%);
-  borde6r: 1px solid red;
-} 
-.slide.three{
-  background: url("/MEDIA-FOLDER/carouselimgs/carousel-3.jpeg"), linear-gradient(125deg, rgba(20, 49, 83, 1), rgba(20, 49, 83, 0.75), rgba(20, 49, 83, 0.10));
-  
-} 
-.slide.four{
-  background: url("/MEDIA-FOLDER/carouselimgs/carousel-4.jpeg"), linear-gradient(125deg, rgba(20, 49, 83, 1), rgba(20, 49, 83, 0.75), rgba(20, 49, 83, 0.10));
-  
-}
   .slide-text {
     text-align: center;
     color: #ffffff;
-    font-size: 29px;
-    height: 40%;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
     text-transform: uppercase;
-    font-weight: bold;
-    line-height: 35px;
     display: flex;
     align-items: center;
-    justify-content: flex-end;
+    justify-content: center;
     flex-direction: column;
+    font-size: 0.9rem;
   }
 
   #slide-button{
@@ -244,34 +185,7 @@
     font-size: 17px;
     cursor: grab;
   }
-*/
-  
-/*
-  .slider {
-    display: flex;
-  }
 
-  .slide {
-    min-width: 100%;
-    box-sizing: border-box;
-    position: relative;
-    height: 100%;
-    background: #000;
-  }
-.slide.one{
-  width: 100vw;
-  height: 80%;
-  background: red;
-  border: 1px solid red;
-  margin: 2rem 0;
-}
-  #sliderImg {
-    width: 100%;
-    height: 40vh;
-    opacity: 0.35;
-    
-  }
-*/
   #prev, #next {
     position: absolute;
     top: 50%;
@@ -318,25 +232,21 @@
 }
   #review{
     display: flex;
-    padding: 7px 10px;
     align-items: center;
     flex-direction: column;
     border: 1px solid var(--bg-color);
     -webkit-border-radius: 0.4rem;
     -moz-border-radius: 0.4rem;
     border-radius: 0.4rem;
+    padding: 0.3rem 0.5rem;
   }
 
   #reviewNumber{
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-weight: bold;
     color: rgb(0, 17, 92);
-    font-size: 25px;
+    font-sizee: 1.8rem;
   }
 
   #reviewText{
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-w5eight: bold;
     color: rgb(43, 43, 43); 
     text-align: center;
   }
@@ -374,21 +284,18 @@
   }
 
   #aboutMini{
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: rgb(123, 0, 255);
     font-size: 19px;
     
   }
 
   #aboutTitle{
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: rgb(0, 17, 92);
     font-size: 25px;
     margin-top: 8px;
   }
 
   #aboutInfoContainer p{
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
     margin-top: 6px;
   }
   #aboutSpan{
@@ -396,7 +303,6 @@
   }
 
   #aboutButton{
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 20px;
     background-color: rgb(255, 201, 6);
     color: rgb(0, 17, 92);
@@ -433,13 +339,11 @@
 }
 
 #ourServiceHeadInfo h2{
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: rgb(123, 0, 255);
     font-size: 19px;
 }
 
 #ourServiceHeadInfo h1{
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: rgb(0, 17, 92);
     font-size: 25px;
     margin-top: 10px;
@@ -497,13 +401,11 @@
 }
 
 .serviceHeading{
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 20px;
     margin-top: 17px;
 }
 
 .serviceText{
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 15px;
     margin: 18px auto;
     width: 90%;
@@ -512,7 +414,6 @@
 }
 
 .serviceReadMore{
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 18px;
     font-weight: bold;
     background-color: rgb(0, 17, 92);
@@ -618,14 +519,12 @@ top: 50%;
 
 .testimonialName{
   color: white;
-  text-align: center;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-align: center
   padding-top: 15px;
 }
 .testimonialQuote{
   color: white;
-  text-align: center;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-align: center
   padding-bottom: 20px;
 }
 
@@ -645,8 +544,7 @@ top: 50%;
   margin-bottom: 25px;
 }
 
-#testimonialTitle{
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+#testimonialTitle
   color: rgb(123, 0, 255);
   font-size: 19px;
   text-align: center;
@@ -654,8 +552,7 @@ top: 50%;
 }
 
 #testimonialsubhead{
-  text-align: center;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-align: center
   font-weight: bold;
   font-size: 29px;
   padding-top: 15px;
@@ -689,8 +586,7 @@ top: 50%;
   width: 93%;
   overflow: hidden;
   margin: auto;
-  text-align: center;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-align: center
 }
 
 #contactInfoText h3{
@@ -766,8 +662,7 @@ top: 50%;
 }
 
 .addressInfo{
-  
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+
 }
 
 .addressInfo p{
@@ -825,8 +720,7 @@ top: 50%;
   /* width: 80%; */
   margin: 0px auto 20px auto;
   font-size: 20px;
-  font-weight: bold;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: bold
   padding: 15px 25px;
   border: none;
   border-radius: 10px ;
@@ -854,8 +748,7 @@ footer{
   width: 100%;
   overflow: hidden;
   background-color: rgb(0, 17, 92);
-  margin-top: 150px;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  margin-top: 150px
 }
 
 .footerSections{
