@@ -10,7 +10,17 @@
   <title>
     HandyTech 
   </title>
+  
   <link rel="stylesheet" href="CSS-FOLDER/index.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+     integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+     crossorigin=""/>
+     
+     <!-- Make sure you put this AFTER Leaflet's CSS -->
+ <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+     integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+     crossorigin=""></script>
+     
 </head>
 
 <body id="body">
@@ -539,6 +549,7 @@
     <div class="contactContainer">
 
       <div class="contactInfo">
+        
         <div class="address contactBox">
           <div class="contactIcon">
             <img src="/MEDIA-FOLDER/WHITE ICONS/location.png" class="contactIconImg">
@@ -590,10 +601,9 @@
       </div>
 
 
-      <div class="mapContainer">
-        <img src="/MEDIA-FOLDER/MAP.PNG" id="mapImage">
+      <div class="mapConthainer" id="map">
+        <!--<img src="/MEDIA-FOLDER/MAP.PNG" id="mapImage">-->
       </div>
-
     </div>
   </div>
 
@@ -617,9 +627,7 @@
 
     <div class="formInfoBox">
       <!-- <input type="" class="contactInput" placeholder="Your Message"> -->
-      <textarea class="contactInput" name="freeform" id="message" rows="7" cols="80" placeholder="Message">
-                Message!!!
-            </textarea>
+      <textarea class="contactInput" name="freeform" id="message" rows="7" cols="80" placeholder="Message"></textarea>
     </div>
 
     <button class="contactButton" type="submit">

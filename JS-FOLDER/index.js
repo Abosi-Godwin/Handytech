@@ -253,5 +253,27 @@ function counter4() {
 
 
 
+// Map rendering function
+
+function renderMap(lat, long) {
+  
+  const myMap = L.map('map', {
+    dragging: false,
+    attributionControl: false,
+    closePopupOnClick: false,
+  }).setView([lat, long], 16);
+  
+  L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+  }).addTo(myMap);
+  
+  L.marker([lat, long]).addTo(myMap)
+    .bindPopup(`The physical location of <br> Handytech on the map`)
+    .openPopup();
+}
+renderMap(52.508, 13.381);
+
+
+//var map = L.map('map').setView([51.505, -0.09], 13);
 
 /* TESTIMONIAL CODE ENDS HERE */

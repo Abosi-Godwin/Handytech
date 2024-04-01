@@ -1,109 +1,117 @@
-:root{
-  --bg-color:rgb(0, 17, 92);
+:root {
+  --bg-color: rgb(0, 17, 92);
   --linear-bg: linear-gradient(125deg, rgba(20, 49, 83, 1), rgba(20, 49, 83, 0.75), rgba(20, 49, 83, 0.10));
 }
 
-*{
-    margin: 0;
-    padding: 0;
-    webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 
-h1, h2, h3, h4 {
+h1,
+h2,
+h3,
+h4 {
   font-family: "Oswald", sans-serif;
   font-style: normal;
 }
-p, button{
+
+p,
+button {
   font-family: "Lora", serif;
   font-style: normal;
 }
 
 
-#navContainer{
-    background-color: var(--bg-color);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    position: relative;
-    overflow: hidden;
-    z-index: 100;
-    height: 10vh;
+#navContainer {
+  background-color: var(--bg-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  z-index: 100;
+  height: 10vh;
 }
 
-#brandLogo{
-    flex: 1;
-    padding:10px 13px;
-    width: 170px;
+#brandLogo {
+  flex: 1;
+  padding: 10px 13px;
+  width: 170px;
 
 }
-#brandLogo p{
-    color: white;
-    font-weight: bold;
-    font-size: 20px;
+
+#brandLogo p {
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
 }
 
-#close{
-    width: 20px;
-    padding-bottom:16px;
+#close {
+  width: 20px;
+  padding-bottom: 16px;
 }
 
-#hamburger{
-    width: 50px;
-    display: flex;
-    align-items: center;
-    padding: 18px 10px;
+#hamburger {
+  width: 50px;
+  display: flex;
+  align-items: center;
+  padding: 18px 10px;
 }
 
 #hamburger:hover {
-    cursor: grab;
+  cursor: grab;
 }
 
-#navigationContainer{
-    background-color: rgb(0, 9, 47);
-    width: 250px;
-    overflow: hidden;
-    position: fixed;
-    height: 100vh;
-    top: 0;
-    right: -100%;
-    z-index: 100;
-    -webkit-transition: all 0.5s;
-    -moz-transition: all 0.5s;
-    -ms-transition: all 0.5s;
-    -o-transition: all 0.5s;
-    transition: all 0.5s;
+#navigationContainer {
+  background-color: rgb(0, 9, 47);
+  width: 250px;
+  overflow: hidden;
+  position: fixed;
+  height: 100vh;
+  top: 0;
+  right: -100%;
+  z-index: 100;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
 }
 
-#navigationContainer ul{
-    padding: 20px;
+#navigationContainer ul {
+  padding: 20px;
 }
 
-#navLinks{
-    padding-top: 20px;
+#navLinks {
+  padding-top: 20px;
 }
 
-#navigationContainer a{
-    text-decoration: none;
-    color: white;
-    font-size: 18px;
-    font-weight: bold;
-    letter-spacing: 1px;
+#navigationContainer a {
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  letter-spacing: 1px;
 }
 
-#navigationContainer a:hover{
-    cursor: grab;
-    border-bottom: 1px solid ;
-    /* color: rgb(6, 255, 252); */
-    color: rgb(255, 201, 6);
-    transition: 0.8s;
+#navigationContainer a:hover {
+  cursor: grab;
+  border-bottom: 1px solid;
+  /* color: rgb(6, 255, 252); */
+  color: rgb(255, 201, 6);
+  transition: 0.8s;
 }
-#navigationContainer.open{
+
+#navigationContainer.open {
   right: 0;
 }
+
 /* NAVIGATION ENDS HERE */
 
 
@@ -115,14 +123,14 @@ p, button{
 
 
 
-  #slider-container {
-    position: relative;
-    overflow: hidden;
-    width: 100vw;
-    height: 60vh;
-    max-width: 600px;
-  }
-  
+#slider-container {
+  position: relative;
+  overflow: hidden;
+  width: 100vw;
+  height: 60vh;
+  max-width: 600px;
+}
+
 .slider {
   display: flex;
   position: relative;
@@ -147,286 +155,297 @@ p, button{
   justify-content: center;
 }
 
-.slide.one{
+.slide.one {
   background: url("/MEDIA-FOLDER/carouselimgs/carousel-1.jpeg"), var(--linear-bg);
 }
 
-.slide.two{
+.slide.two {
   background: url("/MEDIA-FOLDER/carouselimgs/carousel-2.jpeg"), var(--linear-bg);
 }
 
-.slide.three{
+.slide.three {
   background: url("/MEDIA-FOLDER/carouselimgs/carousel-3.jpeg"), var(--linear-bg);
 }
 
-.slide.four{
+.slide.four {
   background: url("/MEDIA-FOLDER/carouselimgs/carousel-4.jpeg"), var(--linear-bg);
 }
 
-  .slide-text {
-    text-align: center;
-    color: #ffffff;
-    text-transform: uppercase;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    font-size: 0.9rem;
-  }
+.slide-text {
+  text-align: center;
+  color: #ffffff;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  font-size: 0.9rem;
+}
 
-  #slide-button{
-    padding: 8px 12px;
-    border-radius: 0.5rem;
-    margin-top: 20px;
-    border: none;
-    background-color: rgb(255, 201, 6);
-    color: black;
-    font-weight: bold;
-    font-size: 17px;
-    cursor: grab;
-  }
+#slide-button {
+  padding: 8px 12px;
+  border-radius: 0.5rem;
+  margin-top: 20px;
+  border: none;
+  background-color: rgb(255, 201, 6);
+  color: black;
+  font-weight: bold;
+  font-size: 17px;
+  cursor: grab;
+}
 
-  #prev, #next {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 24px;
-    cursor: pointer;
-    color: #333;
-    background-color:rgb(255, 201, 6);
-    border: none;
-    padding: 10px;
-    outline: none;
-  }
+#prev,
+#next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 24px;
+  cursor: pointer;
+  color: #333;
+  background-color: rgb(255, 201, 6);
+  border: none;
+  padding: 10px;
+  outline: none;
+}
 
-  #prev { left: 20px; }
-  #next { right: 20px; }
-  /* END OF SLIDER CODE */
+#prev {
+  left: 20px;
+}
+
+#next {
+  right: 20px;
+}
+
+/* END OF SLIDER CODE */
 
 
 
 
 
 
-  /* THIS CODE HERE IS FOR REVIEWS */
+/* THIS CODE HERE IS FOR REVIEWS */
 
-  #reviewsContainer{
-    width: 100%;
-    height: 30vh;
-    overflow: hidden;
-    padding: 0.5rem;
-    /* background-color: rgb(6, 246, 255); */
-    background-color: rgb(224, 224, 224);
-   /* display: flex;
+#reviewsContainer {
+  width: 100%;
+  height: 30vh;
+  overflow: hidden;
+  /* background-color: rgb(6, 246, 255); */
+  background-color: rgb(224, 224, 224);
+  /* display: flex;
     flex-direction: column;*/
-    background: #e9ecef;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-#totalReviews{
+  background: #e9ecef;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#totalReviews {
   display: grid;
-  grid-template-columns: repeat(2,1fr);
+  grid-template-columns: repeat(2, 1fr);
   grid-gap: 0.7rem;
   padding: 0 0.5rem;
 }
-  #review{
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    border: 1px solid var(--bg-color);
-    -webkit-border-radius: 0.4rem;
-    -moz-border-radius: 0.4rem;
-    border-radius: 0.4rem;
-    padding: 0.3rem 0.5rem;
-  }
 
-  #reviewNumber{
-    color: rgb(0, 17, 92);
-    font-sizee: 1.8rem;
-  }
+#review {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  border: 1px solid var(--bg-color);
+  -webkit-border-radius: 0.4rem;
+  -moz-border-radius: 0.4rem;
+  border-radius: 0.4rem;
+  padding: 0 0.5rem;
+  padding-bottom: 0.3rem;
+  height: 80px;
+}
 
-  #reviewText{
-    color: rgb(43, 43, 43); 
-    text-align: center;
-  }
+#reviewNumber {
+  color: rgb(0, 17, 92);
+}
 
-  /* END OF REVIEWS CODE */
+#reviewText {
+  color: rgb(43, 43, 43);
+  text-align: center;
+  font-size: 0.8rem;
+}
 
-
-
-
-  
-
-
-  /* THIS CODE HERE IS FOR ABOUT US */
-
-  #aboutUs{
-    width: 90%;
-    margin: 40px auto;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-  }
-
-  #aboutImageContainer{
-    flex: 1;
-    width: 100%;
-  }
-
-  #aboutImage{
-    width: 100%;
-  }
-
-  #aboutInfoContainer{
-    flex: 1;
-    margin-top: 15px;
-  }
-
-  #aboutMini{
-    color: rgb(123, 0, 255);
-    font-size: 19px;
-    
-  }
-
-  #aboutTitle{
-    color: rgb(0, 17, 92);
-    font-size: 25px;
-    margin-top: 8px;
-  }
-
-  #aboutInfoContainer p{
-    margin-top: 6px;
-  }
-  #aboutSpan{
-    display: none;
-  }
-
-  #aboutButton{
-    font-size: 20px;
-    background-color: rgb(255, 201, 6);
-    color: rgb(0, 17, 92);
-    border: none;
-    border-radius: 100px;
-    padding: 15px 15px;
-    font-weight: bold;
-    margin-top: 10px;
-  }
-
-  #aboutButton:hover{
-    transform: scale(1.08) translateX(8px);
-    transition: 0.5s;
-    background-color: rgb(0, 17, 92);
-    color: white;
-    margin-bottom: 10px;
-    /* transform: translateX(2px); */
-  }
-
-  /* ABOUT US ENDS HERE */
+/* END OF REVIEWS CODE */
 
 
 
 
 
-  
+
+
+/* THIS CODE HERE IS FOR ABOUT US */
+
+#aboutUs {
+  width: 90%;
+  margin: 40px auto;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+#aboutImageContainer {
+  flex: 1;
+  width: 100%;
+}
+
+#aboutImage {
+  width: 100%;
+}
+
+#aboutInfoContainer {
+  flex: 1;
+  margin-top: 15px;
+}
+
+#aboutMini {
+  color: rgb(123, 0, 255);
+  font-size: 19px;
+
+}
+
+#aboutTitle {
+  color: rgb(0, 17, 92);
+  font-size: 25px;
+  margin-top: 8px;
+}
+
+#aboutInfoContainer p {
+  margin-top: 6px;
+}
+
+#aboutSpan {
+  display: none;
+}
+
+#aboutButton {
+  font-size: 20px;
+  background-color: rgb(255, 201, 6);
+  color: rgb(0, 17, 92);
+  border: none;
+  border-radius: 100px;
+  padding: 15px 15px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+#aboutButton:hover {
+  transform: scale(1.08) translateX(8px);
+  transition: 0.5s;
+  background-color: rgb(0, 17, 92);
+  color: white;
+  margin-bottom: 10px;
+  /* transform: translateX(2px); */
+}
+
+/* ABOUT US ENDS HERE */
+
+
+
+
+
+
 /* THIS CODE HERE IS FOR OUR SERVICES */
 
-#ourService{
-    margin: 70px auto;
-    width: 95%;
-    overflow: hidden;
-    text-align: center;
+#ourService {
+  margin: 70px auto;
+  width: 95%;
+  overflow: hidden;
+  text-align: center;
 }
 
-#ourServiceHeadInfo h2{
-    color: rgb(123, 0, 255);
-    font-size: 19px;
+#ourServiceHeadInfo h2 {
+  color: rgb(123, 0, 255);
+  font-size: 19px;
 }
 
-#ourServiceHeadInfo h1{
-    color: rgb(0, 17, 92);
-    font-size: 25px;
-    margin-top: 10px;
+#ourServiceHeadInfo h1 {
+  color: rgb(0, 17, 92);
+  font-size: 25px;
+  margin-top: 10px;
 }
 
-#serviceContainer{
-    display: flex;
-    flex-direction: column;
+#serviceContainer {
+  display: flex;
+  flex-direction: column;
 }
 
-.serviceBox{
-    width: 90%;
-    border-radius: 20px;
-    /* height: 550px; */
-    /* border: 1px solid black; */
-    overflow: hidden;
-    margin: 30px auto;
-    box-shadow: 0px 0px 20px -5px #989898;
-    background-color: #ffffff;
-    position: relative;
-    transition: background-color 0.5s ease-in-out;
-    padding: 2rem;
+.serviceBox {
+  width: 90%;
+  border-radius: 20px;
+  /* height: 550px; */
+  /* border: 1px solid black; */
+  overflow: hidden;
+  margin: 30px auto;
+  box-shadow: 0px 0px 20px -5px #989898;
+  background-color: #ffffff;
+  position: relative;
+  transition: background-color 0.5s ease-in-out;
+  padding: 2rem;
 }
 
- .serviceBox:hover{
-    background-color: rgb(0, 17, 92);
-} 
-
-.serviceBox .backgroundDrop{
-    position: absolute;
-    top: -100%;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgb(0, 17, 92);
-    transition: top 0.5s ease-in-out;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.serviceBox:hover {
+  background-color: rgb(0, 17, 92);
 }
 
-.serviceBox:hover .backgroundDrop{
-    top: 0;
+.serviceBox .backgroundDrop {
+  position: absolute;
+  top: -100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(0, 17, 92);
+  transition: top 0.5s ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.serviceBox:hover .backgroundDrop {
+  top: 0;
 }
 
 
-.serviceImg{
-    width: 50%;
-    padding-top: 40px;
+.serviceImg {
+  width: 50%;
+  padding-top: 40px;
 }
 
-.serviceBoxInfo{
-    position: relative;
-    z-index: 100;
+.serviceBoxInfo {
+  position: relative;
+  z-index: 100;
 }
 
-.serviceHeading{
-    font-size: 20px;
-    margin-top: 17px;
+.serviceHeading {
+  font-size: 20px;
+  margin-top: 17px;
 }
 
-.serviceText{
-    font-size: 15px;
-    margin: 18px auto;
-    width: 90%;
-    line-height: 21px;
-    
+.serviceText {
+  font-size: 15px;
+  margin: 18px auto;
+  width: 90%;
+  line-height: 21px;
+
 }
 
-.serviceReadMore{
-    font-size: 18px;
-    font-weight: bold;
-    background-color: rgb(0, 17, 92);
-    border: none;
-    padding: 17px 33px;
-    border-radius: 100px;
-    margin-bottom: 30px;
-    margin-top: 20px;
+.serviceReadMore {
+  font-size: 18px;
+  font-weight: bold;
+  background-color: rgb(0, 17, 92);
+  border: none;
+  padding: 17px 33px;
+  border-radius: 100px;
+  margin-bottom: 30px;
+  margin-top: 20px;
 }
 
-.serviceLink{
-    text-decoration: none;
-    color: white;
+.serviceLink {
+  text-decoration: none;
+  color: white;
 }
 
 /* OUR SERVICES CODE ENDS HERE */
@@ -465,7 +484,8 @@ p, button{
   height: auto;
 }
 
-.testimonialprev, .testimonialnext {
+.testimonialprev,
+.testimonialnext {
   /* position: absolute;
   top: 10%; */
   /* position: absolute;
@@ -482,18 +502,18 @@ p, button{
 }
 
 .testimonialprev {
-position: absolute;
-left: 10px;
-top: 50%;
+  position: absolute;
+  left: 10px;
+  top: 50%;
 }
 
 .testimonialnext {
-position: absolute;
-right: 10px;
-top: 50%;
+  position: absolute;
+  right: 10px;
+  top: 50%;
 }
 
-.testimonialBox{
+.testimonialBox {
   width: 75%;
   /* border: 1px solid blue; */
   margin: 10px auto;
@@ -505,7 +525,7 @@ top: 50%;
   overflow: hidden;
 }
 
-.testimonialImgBox{
+.testimonialImgBox {
   width: 180px;
   height: 180px;
   border: 4px solid rgb(255, 201, 6);
@@ -517,18 +537,19 @@ top: 50%;
 
 
 
-.testimonialName{
+.testimonialName {
   color: white;
-  text-align: center
+  text-align: center;
   padding-top: 15px;
 }
-.testimonialQuote{
+
+.testimonialQuote {
   color: white;
-  text-align: center
+  text-align: center;
   padding-bottom: 20px;
 }
 
-.testimonialDuty{
+.testimonialDuty {
   color: rgb(255, 201, 6);
   text-align: center;
   font-weight: bold;
@@ -537,22 +558,22 @@ top: 50%;
   text-wrap: wrap;
 }
 
-#testimonialhr{
+#testimonialhr {
   width: 70px;
   margin: auto;
   margin-top: 10px;
   margin-bottom: 25px;
 }
 
-#testimonialTitle
+#testimonialTitle {
   color: rgb(123, 0, 255);
   font-size: 19px;
   text-align: center;
 
 }
 
-#testimonialsubhead{
-  text-align: center
+#testimonialsubhead {
+  text-align: center;
   font-weight: bold;
   font-size: 29px;
   padding-top: 15px;
@@ -571,7 +592,7 @@ top: 50%;
 /* THIS CODE HERE IS FOR CONTACT US */
 
 
-.homeContactContainer{
+.homeContactContainer {
   width: 95%;
   overflow: hidden;
   margin: auto;
@@ -582,28 +603,28 @@ top: 50%;
   border-radius: 5px;
 }
 
-#contactInfoText{
+#contactInfoText {
   width: 93%;
   overflow: hidden;
   margin: auto;
   text-align: center
 }
 
-#contactInfoText h3{
+#contactInfoText h3 {
   color: rgb(123, 0, 255);
   font-size: 19px;
 }
 
-#contactInfoText h1{
+#contactInfoText h1 {
   font-size: 27px;
   margin-top: 10px;
 }
 
-#contactInfoText p{
+#contactInfoText p {
   margin-top: 10px;
 }
 
-#contacthr{
+#contacthr {
   background-color: rgb(0, 24, 130);
   width: 250px;
   margin: 40px auto;
@@ -611,34 +632,36 @@ top: 50%;
 }
 
 
-.contactContainer{
+.contactContainer {
   width: 100%;
   /* border: 1px solid blue; */
   margin: 20px auto;
   background-color: rgb(255, 201, 6);
   border-radius: 17px;
+  padding-bottom: 1rem;
 }
 
-.contactInfo{
+.contactInfo {
   display: flex;
   flex-direction: column;
   padding-bottom: 40px;
 }
 
-.contactBox{
+.contactBox {
   display: flex;
-  width: 80%;
+  width: 80vw;
   margin: 40px auto 0px auto;
-  background-color: white; 
+  background-color: white;
   border-radius: 10px;
   justify-content: space-between;
   align-items: center;
   padding: 30px 15px;
+  gap: 1.5rem;
 }
 
-.contactIcon{
-  width: 70px;
-  height: 70px;
+.contactIcon {
+  width: 50px;
+  height: 50px;
   background-color: rgb(255, 201, 6);
   border-radius: 100%;
   overflow: hidden;
@@ -648,24 +671,23 @@ top: 50%;
 
 }
 
-.contactIconImg{
-  width: 26px;
+.contactIcon img {
+  width: 25px;
   margin: auto;
-} 
 
-.contactIconEmailImg{
+}
+
+.contactIcoznEmailImg {
   width: 40px;
 }
 
-.contactIconCallImg{
+.contactIconCallImg {
   width: 30px;
 }
 
-.addressInfo{
+.addressInfo {}
 
-}
-
-.addressInfo p{
+.addressInfo p {
   /* border: 1px solid blue; */
   padding-top: 10px;
   width: 190px;
@@ -673,25 +695,24 @@ top: 50%;
   font-weight: bold;
 }
 
-
-.mapContainer{
-  width: 100%;
+#map {
+  height: 180px;
+  width: 90vw;
   overflow: hidden;
   margin: auto;
-  border: 1px solid yellow;
-  display: flex;
-  background-color: rgb(0, 24, 130) ;
-  border-radius: 16px;
+  -webkit-border-radius: 0.4rem;
+  -moz-border-radius: 0.4rem;
+  border-radius: 0.4rem;
 }
 
-#mapImage{
+#mapImage {
   width: 80%;
   margin: auto;
   padding: 40px 30px;
 }
 
 
-.contactformContainer{
+.contactformContainer {
   width: 95%;
   overflow: hidden;
   margin: 20px auto;
@@ -703,32 +724,32 @@ top: 50%;
   text-align: center;
 }
 
-.formInfoBox{
+.formInfoBox {
   /* margin: 20px auto; */
   margin: 20px 0px;
 }
 
-.contactInput{
+.contactInput {
   font-size: 18px;
   padding: 22px 20px;
   border-radius: 14px;
   border: none;
-  width: 70% ;
+  width: 70%;
 }
 
-.contactButton{
+.contactButton {
   /* width: 80%; */
   margin: 0px auto 20px auto;
   font-size: 20px;
-  font-weight: bold
+  font-weight: bold;
   padding: 15px 25px;
   border: none;
-  border-radius: 10px ;
+  border-radius: 10px;
   background-color: rgb(0, 24, 130);
   color: rgb(255, 255, 255);
 }
 
-.contactButton:hover{
+.contactButton:hover {
   transform: scale(1.07);
   transition: 0.5s;
 }
@@ -744,41 +765,41 @@ top: 50%;
 
 /* THIS CODE HERE IS FOR FOOTER */
 
-footer{
+footer {
   width: 100%;
   overflow: hidden;
   background-color: rgb(0, 17, 92);
   margin-top: 150px
 }
 
-.footerSections{
+.footerSections {
   display: flex;
   flex-direction: column;
   width: 95%;
   margin: 20px auto 20px auto;
-  
+
 }
 
-.footerBox{
-  padding: 10px ;
+.footerBox {
+  padding: 10px;
 }
 
-.footerHead{
+.footerHead {
   color: rgb(255, 201, 6);
   font-size: 25px;
 }
 
-.footerBox p{
+.footerBox p {
   color: white;
   margin-top: 15px;
 }
 
-#socials{
+#socials {
   display: flex;
   margin-top: 25px;
 }
 
-.footerSocialsContainer{
+.footerSocialsContainer {
   width: 45px;
   height: 45px;
   background-color: white;
@@ -788,81 +809,81 @@ footer{
   display: flex;
 }
 
-.footerSocialsContainer:hover{
+.footerSocialsContainer:hover {
   background-color: rgb(255, 201, 6);
   transform: scale(1.1);
   transition: 0.5s;
 }
 
-.footerSocials{
+.footerSocials {
   width: 18px;
   margin: auto;
 }
 
-.footerfacebook{
+.footerfacebook {
   width: 12px;
   margin: auto;
 }
 
 
-.footerBox2{
+.footerBox2 {
   margin-top: 30px;
 }
 
-.footerBox2 ul{
+.footerBox2 ul {
   margin-left: 20px;
   margin-top: 15px;
   list-style-type: square white;
 }
 
-.footerBox2 ul a{
+.footerBox2 ul a {
   color: white;
   text-decoration: none;
   font-size: 16px;
 }
 
-.footerBox2 ul li{
+.footerBox2 ul li {
   padding-top: 8px;
   letter-spacing: 1px;
 }
 
-.footerBox2 ul li::marker{
+.footerBox2 ul li::marker {
   color: white;
 }
 
-.footerBox2 ul a:hover{
+.footerBox2 ul a:hover {
   color: aqua;
   cursor: grab;
   transition: 0.5s;
 }
 
 
-.footerContactInfo hr{
+.footerContactInfo hr {
 
   margin-top: 20px;
 }
 
-.footerContactInfo li{
+.footerContactInfo li {
   width: 100%;
   display: flex;
   align-items: center;
   margin-top: 20px;
 }
 
-.footerContactInfo p{
+.footerContactInfo p {
   margin-left: 10px
 }
 
-.footerImage{
+.footerImage {
   width: 20px;
 }
 
-.footerBox3{
+.footerBox3 {
   margin-top: 30px;
 }
 
 
-#rights{
+#rights {
   margin: auto;
   text-align: center;
   color: white;
@@ -872,7 +893,7 @@ footer{
   line-height: 25px;
 }
 
-#rightsSpan{
+#rightsSpan {
   color: rgb(255, 201, 6);
 }
 
@@ -885,11 +906,11 @@ footer{
 /* DESKTOP SIZE */
 
 @media (min-width: 980px) {
-  #hamburgerMenu{
+  #hamburgerMenu {
     display: none;
   }
 
-  #navigationContainer{
+  #navigationContainer {
     display: block;
     background-color: transparent;
     position: absolute;
@@ -897,20 +918,20 @@ footer{
 
   }
 
-  #navigationContainer ul{
+  #navigationContainer ul {
     display: flex;
     list-style: none;
   }
 
-  #close{
+  #close {
     display: none;
   }
 
-  #navLinks{
+  #navLinks {
     padding: 10px 10px;
   }
 
-  #navigationContainer a{
+  #navigationContainer a {
     font-weight: 600;
   }
 
@@ -919,24 +940,24 @@ footer{
 
   /* SLIDER STARTS HERE */
 
-  #slider-container{
+  #slider-container {
     max-width: 100%;
   }
 
-  .slide{
+  .slide {
     height: 500px;
   }
 
-  #sliderImg{
+  #sliderImg {
     width: 100%;
   }
 
-  .slide-text{
+  .slide-text {
     font-size: 45px;
     line-height: 46px;
   }
 
-  #slide-button:hover{
+  #slide-button:hover {
     background-color: rgb(255, 201, 255);
     transition: 0.5s;
   }
@@ -947,7 +968,7 @@ footer{
   /* REVIEWS STARTS HERE */
 
 
-  #totalReviews{
+  #totalReviews {
     display: flex;
     flex-direction: row;
     margin: auto;
@@ -960,51 +981,51 @@ footer{
     background-color: #26d48c;
   }
 
-  #review{
+  #review {
     padding: 60px 20px;
     margin: auto;
   }
 
-  #reviewNumber{
+  #reviewNumber {
     font-size: 30px;
     color: #3636ff;
   }
 
-  #reviewText{
+  #reviewText {
     color: white;
   }
 
-   /* REVIEWS ENDS HERE */
+  /* REVIEWS ENDS HERE */
 
 
 
 
-   /* ABOUT US STARTS HERE */
+  /* ABOUT US STARTS HERE */
 
-   #aboutUs{
+  #aboutUs {
     flex-direction: row;
-   }
+  }
 
-   #abouUsContainer{
+  #abouUsContainer {
     display: flex;
     width: 1500px;
     overflow: hidden;
     margin: auto;
-   }
+  }
 
-   #aboutInfoContainer{
+  #aboutInfoContainer {
     margin-top: 0px;
     margin-left: 50px;
     width: 500px;
-   }
+  }
 
-   #aboutInfoContainer p{
+  #aboutInfoContainer p {
     margin-top: 12px;
     color: #3d3d3d;
-   }
+  }
 
-   #aboutSpan{
-    display:inline ;
+  #aboutSpan {
+    display: inline;
   }
 
   /* ABOUT US ENDS HERE */
@@ -1015,26 +1036,26 @@ footer{
 
   /* SERVICES STARTS HERE */
 
-  #ourService{
+  #ourService {
     background-color: #e7e7e7;
     padding-top: 30px;
   }
 
-  #serviceContainer{
+  #serviceContainer {
     flex-direction: row;
     flex-wrap: wrap;
     width: 1000px;
     margin: auto;
   }
 
-  #ourServiceHeadInfo h1{
+  #ourServiceHeadInfo h1 {
     font-size: 38px;
     width: 700px;
     text-align: center;
     margin: auto;
   }
 
-  .serviceBox{
+  .serviceBox {
     width: 300px;
   }
 
@@ -1045,32 +1066,34 @@ footer{
 
   /* TESTIMONIAL STARTS HERE */
 
-  .testimonialslider-container{
+  .testimonialslider-container {
     /* background-color: #ececec; */
   }
 
-  .testimonialBox{
+  .testimonialBox {
     width: 700px;
     border-radius: 40px 0px 40px 0px;
   }
 
-  .testimonialQuote{
+  .testimonialQuote {
     width: 600px;
     margin: auto;
     font-weight: bold;
   }
 
-  .testimonialprev{
+  .testimonialprev {
     left: 18%;
   }
-  .testimonialprev:hover{
+
+  .testimonialprev:hover {
     cursor: grab;
   }
 
-  .testimonialnext{
+  .testimonialnext {
     right: 18%;
   }
-  .testimonialnext:hover{
+
+  .testimonialnext:hover {
     cursor: grab;
   }
 
@@ -1080,17 +1103,18 @@ footer{
 
   /* CONTACT INFO STARTS HERE */
 
-  .contactInfo{
+  .contactInfo {
     flex-direction: row;
   }
 
-  #contactInfoText h1{
+  #contactInfoText h1 {
     font-size: 38px;
   }
 
-  .contactBox{
+  .contactBox {
     width: 300px;
   }
+
   /* CONTACT INFO ENDS HERE */
 
 
@@ -1098,30 +1122,30 @@ footer{
 
   /* FOOTER INFO STARTS HERE */
 
-.footerSections{
-  flex-direction: row;
-  width: 1000px;
-  overflow: hidden;
-  justify-content: space-between;
-}
+  .footerSections {
+    flex-direction: row;
+    width: 1000px;
+    overflow: hidden;
+    justify-content: space-between;
+  }
 
-.footerBox{
-  width: 300px;
-}
+  .footerBox {
+    width: 300px;
+  }
 
-.footerBox2{
-  margin-top: 0px;
-  padding-left: 80px;
-}
+  .footerBox2 {
+    margin-top: 0px;
+    padding-left: 80px;
+  }
 
-.footerBox3{
-  margin-top: 0px;
-  padding-left: 80px;
-}
+  .footerBox3 {
+    margin-top: 0px;
+    padding-left: 80px;
+  }
 
 
 
-  
+
 }
 
 
@@ -1133,55 +1157,55 @@ footer{
 
 /* SLIDER FOR SMALLER TAB SCREEN*/
 @media (min-width:640px) {
-  #slider-container{
+  #slider-container {
     max-width: 100%;
   }
 
-  .slide{
+  .slide {
     height: 360px;
   }
 
-  #sliderImg{
+  #sliderImg {
     width: 100%;
   }
 
-  .slide-text{
+  .slide-text {
     font-size: 45px;
     line-height: 46px;
   }
 
-  #slide-button:hover{
+  #slide-button:hover {
     background-color: rgb(255, 201, 255);
     transition: 0.5s;
   }
 }
 
-@media (min-width: 768px){
+@media (min-width: 768px) {
 
   /* SLIDER STARTS HERE */
-  #slider-container{
+  #slider-container {
     max-width: 100%;
   }
 
-  .slide{
+  .slide {
     height: 530px;
   }
 
-  #sliderImg{
+  #sliderImg {
     width: 100%;
   }
 
-  .slide-text{
+  .slide-text {
     font-size: 45px;
     line-height: 46px;
   }
 
-  #slide-button:hover{
+  #slide-button:hover {
     background-color: rgb(255, 201, 255);
     transition: 0.5s;
   }
 
-  
+
 
   /* SLIDER ENDS HERE */
 
@@ -1190,7 +1214,7 @@ footer{
 
   /* REVIEWS STARTS HERE */
 
-  #totalReviews{
+  #totalReviews {
     padding: 0px 0px 0px 30px;
   }
 
@@ -1201,33 +1225,33 @@ footer{
 
 
   /* ABOUT US STARTS HERE */
-  #aboutUs{
+  #aboutUs {
     flex-direction: row;
-   }
+  }
 
-   #abouUsContainer{
+  #abouUsContainer {
     display: flex;
     width: 1500px;
     overflow: hidden;
     margin: auto;
-   }
+  }
 
-   #aboutInfoContainer{
+  #aboutInfoContainer {
     margin-top: 0px;
     margin-left: 50px;
     width: 500px;
-   }
-
-   #aboutInfoContainer p{
-    margin-top: 12px;
-    color: #3d3d3d;
-   }
-
-   #aboutSpan{
-    display:inline ;
   }
 
-  #aboutSpan2{
+  #aboutInfoContainer p {
+    margin-top: 12px;
+    color: #3d3d3d;
+  }
+
+  #aboutSpan {
+    display: inline;
+  }
+
+  #aboutSpan2 {
     display: none;
   }
 
@@ -1241,29 +1265,29 @@ footer{
   /* SERVICES STARTS HERE */
 
 
-  #ourService{
+  #ourService {
     background-color: #f1f1f1;
     padding-top: 30px;
   }
 
-  #serviceContainer{
+  #serviceContainer {
     flex-direction: row;
     flex-wrap: wrap;
     width: 1040px;
     margin: auto;
   }
 
-  #ourServiceHeadInfo h1{
+  #ourServiceHeadInfo h1 {
     font-size: 38px;
     width: 700px;
     text-align: center;
     margin: auto;
   }
 
-  .serviceBox{
+  .serviceBox {
     width: 300px;
   }
-  
+
   /* SERVICES ENDS HERE */
 
 
@@ -1274,32 +1298,34 @@ footer{
   /* TESTIMONIAL STARTS HERE */
 
 
-  .testimonialslider-container{
+  .testimonialslider-container {
     /* background-color: #ececec; */
   }
 
-  .testimonialBox{
+  .testimonialBox {
     width: 700px;
     border-radius: 40px 0px 40px 0px;
   }
 
-  .testimonialQuote{
+  .testimonialQuote {
     width: 600px;
     margin: auto;
     font-weight: bold;
   }
 
-  .testimonialprev{
+  .testimonialprev {
     left: 3%;
   }
-  .testimonialprev:hover{
+
+  .testimonialprev:hover {
     cursor: grab;
   }
 
-  .testimonialnext{
-    right:3%;
+  .testimonialnext {
+    right: 3%;
   }
-  .testimonialnext:hover{
+
+  .testimonialnext:hover {
     cursor: grab;
   }
 
@@ -1311,13 +1337,11 @@ footer{
 
   /* CONTACT INFO STARTS HERE */
 
-  .addressInfo{
+  .addressInfo {
     margin-right: 270px;
   }
 
   /* CONTACT INFO ENDS HERE */
 
-  
+
 }
-
-
