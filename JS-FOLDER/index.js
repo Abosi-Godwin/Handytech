@@ -155,11 +155,10 @@ slidePrevBtn.addEventListener("click", ()=> {
 /* element CODE HERE IS FOR sliders */
 
 
-const customerNumber = document.querySelector(".customerNumber");
-const businessNumber = document.querySelector(".businessNumber");
-const clientsNumber = document.querySelector(".clientsNumber");
-const slidersNumber = document.querySelector(".reviewsNumber");
-
+const customerNumber = document.querySelector(".customerNumber h1");
+const businessNumber = document.querySelector(".businessNumber h1");
+const clientsNumber = document.querySelector(".clientsNumber h1");
+const slidersNumber = document.querySelector(".reviewsNumber h1");
 const counter = (element, limitNumber)=> {
   let num = 0;
   const countdown = setInterval(() => {
