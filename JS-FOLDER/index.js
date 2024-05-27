@@ -47,7 +47,6 @@ const sliding = () => {
 
   sliders.forEach((slide, i) => {
     const transformVal = `translateX(${100 * (i - sliderCurrentIndex)}%)`;
-    console.log(transformVal);
     slide.style.transform = transformVal;
     
   });
@@ -83,7 +82,7 @@ const mouseHoverFunc = (event, funcObj) => {
   const colorElemenets = element => {
     
     if (element.classList.contains('serviceReadMore')) {
-      element.style.transition = transitionDur;
+     // element.style.transition = transitionDur;
       element.style.backgroundColor = btnBg;
     }
     element.style.color = color;
@@ -153,109 +152,33 @@ slidePrevBtn.addEventListener("click", ()=> {
 
 
 
-
-
-
 /* element CODE HERE IS FOR sliders */
 
 
 const customerNumber = document.querySelector(".customerNumber");
 const businessNumber = document.querySelector(".businessNumber");
 const clientsNumber = document.querySelector(".clientsNumber");
-const slidersNumber = document.querySelector(".slidersNumber");
-let customerinner = 0;
+const slidersNumber = document.querySelector(".reviewsNumber");
 
-function add() {
-  customerinner++;
-}
-
-/*
-counter1();
-counter2();
-counter3();
-counter4();
-*/
-function counter1() {
-
-  const countdownId = setInterval(function run() {
-
-    customerNumber.innerText = customerinner;
-    add();
-
-    if (customerNumber.innerText === '99') {
-      clearInterval(countdownId);
-      customerNumber.innerText = 99
-    };
+const counter = (element, limitNumber)=> {
+  let num = 0;
+  const countdown = setInterval(() => {
+    element.innerText = num++;
+    +element.innerText >= +limitNumber && 
+      clearInterval(countdown)
   }, 30);
-
-  add();
-
 }
 
-function counter2() {
-  const countdownId2 = setInterval(function run2() {
-
-    businessNumber.innerText = customerinner;
-    add();
-
-    if (businessNumber.innerText === '25') {
-      clearInterval(countdownId2);
-      businessNumber.innerText = 25;
-    };
-  }, 30);
-
-  add();
-}
-
-
-
-function counter3() {
-  const countdownId3 = setInterval(function run3() {
-    clientsNumber.innerText = customerinner;
-
-    add();
-
-    if (clientsNumber.innerText === '120') {
-      clearInterval(countdownId3);
-      clientsNumber.innerText = 120;
-    }
-  }, 30)
-
-  add();
-}
-
-
-
-
-
-function counter4() {
-
-  let emeka = 0
-
-  function eme() {
-    emeka++
-  }
-
-  const countdownId4 = setInterval(function run4() {
-    slidersNumber.innerText = emeka;
-
-    eme();
-
-    if (slidersNumber.innerText === '5') {
-      clearInterval(countdownId4);
-      slidersNumber.innerText = 5;
-    };
-  }, 30)
-
-  eme();
-}
-
-
-
+counter(customerNumber,99);
+counter(businessNumber,25);
+counter(clientsNumber,120);
+counter(slidersNumber, 11);
 
 
 // Map rendering function
 
+
+// I added this part by myself.
 function renderMap(lat, long) {
   
   const myMap = L.map('map', {
